@@ -1,0 +1,60 @@
+<template name="course-card">
+  <view class="course-card">
+    <view>
+      <image src="{{course.coverPath}}" mode="widthFix"></image>
+    </view>
+    <view>{{course.name}}</view>
+    <view wx:if="{{course.price>0}}" class="price">{{course.price}}</view>
+    <view wx:else class="price">免费</view>
+  </view>
+</template>
+
+<view class="body">
+  <!-- ************************ 头部 ************************ -->
+  <view class="head">
+    <button bindtap="onCost" size="mini">付费</button>
+    <button bindtap="onFree" size="mini">免费</button>
+  </view>
+  <!-- ************************ 中间 ************************ -->
+  <view class="list-wrap">
+    <scroll-view scroll-y="true" class="list">
+      <view class="list-scroll-view">
+        <block wx:for="{{list}}" wx:key="i" wx:for-index="i" wx:for-item="course">
+          <template is="course-card" data="{{course}}" />
+        </block>
+        <!--       
+      <view wx:for="{{list}}" wx:key="i" wx:for-index="i" wx:for-item="course" class="course-card">
+        <view>
+          <image src="{{course.coverPath}}" mode="widthFix"></image>
+        </view>
+        <view>({{i+1}}){{course.name}}</view>
+        <view wx:if="{{course.price>0}}" class="price">{{course.price}}</view>
+        <view wx:else class="price">免费</view>
+      </view> -->
+
+      </view>
+    </scroll-view>
+  </view>
+  <!-- ************************ 底部 ************************ -->
+  <view class="guide">
+    <view class="guide-item active">
+      <image mode="widthFix" src="../../img/icon/index-active.png"></image>
+      <view>首页</view>
+    </view>
+
+    <view class="guide-item">
+      <image mode="widthFix" src="../../img/icon/sort.png"></image>
+      <view>分类</view>
+    </view>
+
+    <view class="guide-item">
+      <image mode="widthFix" src="../../img/icon/cal.png"></image>
+      <view>课程表</view>
+    </view>
+
+    <view class="guide-item">
+      <image mode="widthFix" src="../../img/icon/head.png"></image>
+      <view>我的</view>
+    </view>
+  </view>
+</view>

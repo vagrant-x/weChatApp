@@ -1,0 +1,68 @@
+<!--pages/newsList/newsList.wxml-->
+
+<!-- 搜索框 -->
+<view class="head">
+    <input type="text" placeholder="请输入需要搜索的内容"></input>
+</view>
+
+<!-- 头部 -->
+<view class="type-pad">
+    <!-- 待优化为 flex 布局 -->
+    <block wx:for="{{topBars}}" wx:key="id">
+        <text class="{{selectTypeId == item.id ? 'select':''}}" bindtap="selectBar"
+            data-val="{{item}}">{{item.name}}</text>
+    </block>
+</view>
+
+<view class="body">
+    <!-- 用户头像 姓名 关注 视频 -->
+    <!-- <view class="item">
+        <view class="user-info">
+            <image src="../../img/user1.jpg"></image>
+            <text class="user-name">靓仔</text>
+            <text class="focus no-focus">关注</text>
+        </view>
+        <view class="title">
+            <text>只争朝夕，不负韶华。</text>
+        </view>
+        <view class="content">
+            <video object-fit="fill"
+                src="https://zsb.gdut.edu.cn/__local/2/98/7E/93E77D2CCC42DC1667B4D29B3B1_CEB5674E_4DBFDA7.mp4?e=.mp4"></video>
+        </view>
+    </view> -->
+
+    <!-- 用户头像 姓名 关注 -->
+    <!-- <view class="item">
+        <view class="user-info">
+            <image src="../../img/user1.jpg"></image>
+            <text class="user-name">靓仔</text>
+            <text class="focus no-focus">关注</text>
+        </view>
+        <view class="title">
+            <text>腾讯课堂是腾讯推出的专业在线教育平台，聚合大量优质教育机构和名师，下设职业培训、公务员考试、托福雅思、考证考级、英语口语、中小学教育等众多在线学习精品课程，打造老师在线上课教学、学生及时互动学习的课堂。</text>
+        </view>
+        <view class="content">
+            <image mode="widthFix" src="../../img/cover.png"></image>
+        </view>
+    </view> -->
+
+    <view class="item" wx:for="{{newsList}}" wx:key="id">
+        <view class="user-info">
+            <image src="{{item.headUrl}}"></image>
+            <text class="user-name">{{item.userName}}</text>
+            <text class="focus {{item.isFocus ? '': 'no-focus'}}">
+                <block wx:if="{{item.isFocus}}">已关注</block>
+                <block wx:else>关注</block>
+            </text>
+        </view>
+        <view class="title">
+            <block wx:if="{{item.isVideo}}"><text>{{item.newsTitle}}</text></block>
+            <block wx:else><text>{{item.newsAbstrack}}</text></block>
+        </view>
+        <view class="content">
+            <block wx:if="{{item.isVideo}}"> <video object-fit="fill" src="{{item.videoUrl}}"></video></block>
+            <block wx:else> <image mode="widthFix" src="{{item.imageUrl}}"></image></block>
+        </view>
+    </view>
+
+</view>

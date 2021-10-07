@@ -1,0 +1,11 @@
+<view class="card">
+  <image class="bg" mode="widthFix" src="../../img/bg.png"></image>
+  <image class="logo" src="../../img/agreeLogo.png"></image>
+
+  <view class="info">
+    <view>姓名：许卓杰</view>
+    <view>部门：产品一部</view>
+    <view>电话：18814121269</view>
+    <view>邮箱：xuzhuojie@agree.com.cn</view>
+  </view>
+</view>

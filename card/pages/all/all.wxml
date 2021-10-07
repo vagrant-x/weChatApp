@@ -1,0 +1,11 @@
+<!--pages/all/all.wxml-->
+
+<button type="primary" class="button1" bindtap="callFunc" data-callUrl="/pages/index/index">课程</button>
+<button type="primary" class="button1" bindtap="callFunc" data-callUrl="/pages/index_card/index">我的名片</button>
+<button type="primary" class="button1" bindtap="callFunc" data-callUrl="/pages/index_v1/index">核心价值观插图</button>
+
+<button type="primary" class="button1" bindtap="callFunc" data-callUrl="/pages/logs/logs">启动日志</button>
+<button type="primary" class="button1" bindtap="callFunc" data-callUrl="/pages/newsList/newsList">我的头条</button>
+
+<button type="primary" class="button1" bindtap="callFunc" data-callUrl="/pages/test/test">测试组件</button>
+<button type="primary" class="button1" bindtap="callFunc" data-callUrl="/pages/test2/test2">测试组件2</button>

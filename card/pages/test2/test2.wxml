@@ -1,0 +1,25 @@
+<!--pages/test2/test2.wxml-->
+<text>pages/test2/test2.wxml</text>
+
+
+<input type="text" bindinput="changeMe"></input>
+<button bindtap="clickMe" data-val1="xuzhuojie" data-val2="赞同">点击按钮</button>
+<button open-type="getUserInfo" bindgetuserinfo="getUserInfo1">获取用户信息</button>
+<button open-type="getPhoneNumber" bindgetphonenumber="getphonenumber1">获取用户手机号</button>
+<button open-type="contact" bindcontact="contact1">联系客服</button>
+
+
+<view>{{msg}}</view>
+<rich-text nodes="{{msg2}}"></rich-text>
+
+<button bindtap="showAlert">弹窗</button>
+
+<!-- 页面跳转 -->
+<navigator url="/pages/index_card/index">navigator 跳转页面</navigator>
+<button bindtap="nav"> button 跳转页面</button>
+
+<!-- 获取数据
+需要在开发工具-> 详情 -> 不校验合法域名
+ -->
+<button bindtap="getData">获取数据</button>
+<view>req_data: {{req_data}}</view>
