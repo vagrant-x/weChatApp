@@ -1,0 +1,2 @@
+<button class="bt" bindtap="bt_scan" >扫一扫</button>
+<button class="bt" bindtap="bt_touch">靠一靠</button>

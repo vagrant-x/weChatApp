@@ -1,0 +1,7 @@
+/* pages/take_number/number_taking_method/number_taking_method.wxss */
+.bt {
+    width: 90%;
+    height: 80px;
+    margin-top: 20px;
+    text-align: center;
+}

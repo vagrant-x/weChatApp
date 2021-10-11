@@ -1,0 +1,16 @@
+{
+  "pages":[
+    "pages/take_number/number_taking_method/number_taking_method",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/take_number/nfc_tips/nfc_tips"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle":"black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
