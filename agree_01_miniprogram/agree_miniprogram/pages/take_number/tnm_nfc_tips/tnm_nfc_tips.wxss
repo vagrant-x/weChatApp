@@ -1,0 +1,12 @@
+/* pages/take_number/nfc_tips/nfc_tips.wxss */
+
+.view-for-image {}
+
+.view-for-image>image {
+    width: 90% !important;
+    padding-left: 5%;
+}
+
+.view-for-text {
+    text-align: center;
+}

@@ -1,0 +1,28 @@
+/* pages/take_number/tnm_scan_idr/tnm_scan_idr.wxss */
+
+.text-tips{
+    text-align: center;
+}
+.text-left{
+    color: green;
+}
+
+.view-row{
+    flex-direction: row;
+}
+
+.view-for-button{
+    display: flex;
+    width: 100%;
+}
+.view-for-button-item{
+    width: 50%;
+}
+
+view > button{
+    background-color: rgb(146, 175, 230);
+    width: 80% !important;
+    font-size: 14px;
+    margin: 0px !important;
+    padding: 0px !important;
+}

@@ -80,18 +80,26 @@ Page({
       success(res) {
         console.log(res)
         that.data.bt_scan_data = res;
-        wx.showModal({
-          title: '提示',
-          // content: JSON.stringify(res),
-          content: res.result,
-          success(res1) {
-            if (res1.confirm) {
-              console.log('用户点击确定')
-            } else if (res1.cancel) {
-              console.log('用户点击取消')
-            }
-          }
+        let p_url = "/pages/take_number/tnm_scan_idr/tnm_scan_idr?controllerId=" + that.data.bt_scan_data.result
+        wx.redirectTo({
+          url: p_url,
+          success: function(){
+            console.log(`跳转到 ${p_url} 成功`)
+          },
         })
+
+        // wx.showModal({
+        //   title: '提示',
+        //   // content: JSON.stringify(res),
+        //   content: res.result,
+        //   success(res1) {
+        //     if (res1.confirm) {
+        //       console.log('用户点击确定')
+        //     } else if (res1.cancel) {
+        //       console.log('用户点击取消')
+        //     }
+        //   }
+        // })
       }
     });
   },
@@ -100,7 +108,16 @@ Page({
    * 靠一靠调用方法：
    *  靠近NFC 读取里面controllerId
    */
-  bt_touch: function () {
+  bt_touch: function(){
+    let page_url = "/pages/take_number/tnm_nfc_tips/tnm_nfc_tips"
+    wx.redirectTo({
+      url: page_url,
+      success(res){
+        console.log(`跳转到 ${page_url} 成功`)
+      },
+    })
+  },
+  bt_touch_call_nfc: function () {
     const nfc = wx.getNFCAdapter()
     this.nfc = nfc
     const that = this
@@ -247,38 +264,45 @@ Page({
         app.globalData.token = res.data.access_token
         this_page.data.token = res.data.access_token
         console.log("取号 token : ", app.globalData.token)
-        this_page.call_idr()
+        // this_page.call_idr()
+        // 获取token 成功， 跳转到 tnm_scan_idr
+        // wx.redirectTo({
+        //   url: '/pages/take_number/tnm_scan_idr/tnm_scan_idr',
+        //   success: function(){
+        //     console.log("跳转到 /pages/take_number/tnm_scan_idr/tnm_scan_idr")
+        //   }
+        // })
       }
     })
   },
 
-  //call idr： 调用身份证
-  call_idr: function(){
-    let bearer_token =  'Bearer ' + this.data.token
-    console.log("bearer_token :", bearer_token)
-    wx.request({
-      url: 'https://www.xiongweixp.tech/adaas/service', 
-      method: "POST",
-      data: {
-        "header": {
-            "namespace": "ADaaS.Post",
-            "resource": "Controller",
-            "name": "TestDevice",
-            "version": "1"
-        },
-        "payload": {
-            "controllerId": "0000202B09D7",
-            "deviceId": "514B2AFA",
-            "category": "idr"
-        }
-    },
-      header: {
-        'content-type': 'application/json', // 默认值
-        'Authorization': bearer_token, //token
-      },
-      success(res) {
-        console.log(res)
-      }
-    })
-  },
+  // //call idr： 调用身份证
+  // call_idr: function(){
+  //   let bearer_token =  'Bearer ' + this.data.token
+  //   console.log("bearer_token :", bearer_token)
+  //   wx.request({
+  //     url: 'https://www.xiongweixp.tech/adaas/service', 
+  //     method: "POST",
+  //     data: {
+  //       "header": {
+  //           "namespace": "ADaaS.Post",
+  //           "resource": "Controller",
+  //           "name": "TestDevice",
+  //           "version": "1"
+  //       },
+  //       "payload": {
+  //           "controllerId": "0000202B09D7",
+  //           "deviceId": "514B2AFA",
+  //           "category": "idr"
+  //       }
+  //   },
+  //     header: {
+  //       'content-type': 'application/json', // 默认值
+  //       'Authorization': bearer_token, //token
+  //     },
+  //     success(res) {
+  //       console.log(res)
+  //     }
+  //   })
+  // },
 })

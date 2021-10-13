@@ -1,9 +1,11 @@
 {
   "pages":[
-    "pages/take_number/number_taking_method/number_taking_method",
+    "pages/take_number/number_taking_index/number_taking_index",
+    "pages/take_number/tnm_nfc_tips/tnm_nfc_tips",
+    "pages/take_number/tnm_scan_idr/tnm_scan_idr",
+    "pages/take_number/tnm_print/tnm_print",  
     "pages/index/index",
-    "pages/logs/logs",
-    "pages/take_number/nfc_tips/nfc_tips"
+    "pages/logs/logs"
   ],
   "window":{
     "backgroundTextStyle":"light",

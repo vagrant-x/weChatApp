@@ -1,0 +1,10 @@
+<!--pages/take_number/nfc_tips/nfc_tips.wxml-->
+
+<view>
+    <view class="view-for-image">
+        <image src="../../../resource/img/wangguan.jpg"></image>
+    </view>
+    <view  class="view-for-text">
+        <text>请将手机NFC靠近网关NFC</text>
+    </view>
+</view>

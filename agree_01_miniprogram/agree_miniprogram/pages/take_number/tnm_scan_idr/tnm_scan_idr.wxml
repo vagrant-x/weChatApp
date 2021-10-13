@@ -1,0 +1,59 @@
+<!--pages/take_number/tnm_scan_idr/tnm_scan_idr.wxml-->
+
+<!-- 提示用刷身份证 -->
+<view wx:if="{{readingIdCadr}}">
+    <image  mode="widthFix"  src="../../../resource/img/idr.png"></image>
+    <view class="text-tips">请将身份证放置于读卡器上方</view>
+</view>
+<!-- 显示用户身份证信息 -->
+<view wx:else>
+    <view>
+        <view>
+            <view class="view-row">
+                <text decode="true" class="text-left">姓名&nbsp;</text>
+                <text>{{userInfo.name}}</text>
+            </view>
+            <view class="view-row">
+                <text decode="true" class="text-left">性别&nbsp;</text>
+                <text>{{userInfo.gender}}</text>
+            </view>
+            <view class="view-row">
+                <text decode="true" class="text-left">民族&nbsp;</text>
+                <text>{{userInfo.nationality}}</text>
+            </view>
+            <view class="view-row">
+                <text decode="true" class="text-left">出生&nbsp;</text>
+                <text>{{userInfo.birthday}}</text>
+            </view>
+        </view>
+        <!-- <view>
+            <image></image>
+        </view> -->
+        <view class="view-row">
+            <text decode="true" class="text-left">住址&nbsp;</text>
+            <text>{{userInfo.address}}</text>
+        </view>
+        <view class="view-row">
+            <text decode="true" class="text-left">公民身份号码&nbsp;</text>
+            <text>{{userInfo.id}}</text>
+        </view>
+    </view>
+    <view>
+        <view class="view-row">
+            <text decode="true" class="text-left">签发机关&nbsp;</text>
+            <text>{{userInfo.department}}</text>
+        </view>
+        <view class="view-row">
+            <text decode="true" class="text-left">有效期限&nbsp;</text>
+            <text>{{userInfo.from}}-{{userInfo.end}}</text>
+        </view>
+    </view>
+    <view class="view-for-button">
+        <view class="view-for-button-item">
+            <button bindtap="re_call_idr">重新读取</button>
+        </view>
+        <view  class="view-for-button-item">
+            <button bindtap="show_number_taking_page">信息正确，取号</button>
+        </view>
+    </view>
+</view>
