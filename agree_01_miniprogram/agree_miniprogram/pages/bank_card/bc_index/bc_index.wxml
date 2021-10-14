@@ -1,0 +1,22 @@
+<!--pages/bank_card/bc_index/bc_index.wxml-->
+
+<view>
+    <!-- 身份证正反面 -->
+    <view class="view-idr">
+        <image bindtap="click_image_zm" style="width: 90%;" mode="widthFix" src="{{url.url_idCard_zm_tmp}}"></image>
+        <view wx:if="{{show_zm_delete_image}}" class="view-idr-view">
+            <image class="image-delete" mode="widthFix" src="../../../resource/img/bank_card/u56.svg"></image>
+        </view>
+    </view>
+    <view class="view-idr">
+        <image bindtap="click_image_fm" style="width: 90%;" mode="widthFix" src="{{url.url_idCard_fm_tmp}}"></image>
+        <view wx:if="{{show_fm_delete_image}}" class="view-idr-view">
+            <image class="image-delete" mode="widthFix" src="../../../resource/img/bank_card/u56.svg"></image>
+        </view>
+    </view>
+
+</view>
+<!-- 下一步按钮 -->
+<view>
+    <button class="bt-next">下一步</button>
+</view>

@@ -1,0 +1,27 @@
+/* pages/bank_card/bc_index/bc_index.wxss */
+/* .view-all{
+    display: flex;
+} */
+
+.view-idr{
+    display: flex;
+    flex-direction: row;
+    /* width: 80%; */
+}
+.view-idr-v1 > image{
+    width: 100%;
+}
+.view-idr-view{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+view > image.image-delete{
+    width: 25px;
+    text-align: justify;
+}
+
+.bt-next{
+    background-color: rgb(163, 158, 236);
+}

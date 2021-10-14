@@ -1,0 +1,16 @@
+/* pages/bank_card/input_information/input_information.wxss */
+
+.view-input-info > view{
+    display: flex;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+.view-input-info > view > text{
+    margin-right: 10px;
+}
+
+
+
+.bt-next{
+    background-color: rgb(163, 158, 236);
+}

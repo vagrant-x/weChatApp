@@ -25,9 +25,9 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        // this.data.controllerId = options.controllerId //保存网关ID
-        // let app = getApp()
-        // this.data.token =  app.globalData.token  //设置获取的token到本页面
+        this.data.controllerId = options.controllerId //保存网关ID
+        let app = getApp()
+        this.data.token =  app.globalData.token  //设置获取的token到本页面
         console.log(`controllerId = ${this.data.controllerId}`)
         this.call_idr()  //调用身份证模块
     },
