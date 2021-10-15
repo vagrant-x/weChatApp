@@ -1,0 +1,26 @@
+/* pages/bank_card/bc_check_info/bc_check_info.wxss */
+.body-top-view{
+    margin-top: 15px;
+}
+.body-top-view-addr{
+    display: flex;
+    flex-direction: row;
+}
+.view_first_text{
+    display: inline-block;
+    width: 80px;
+    text-align: end;
+    margin-right: 10px;
+}
+.view_second_text{
+}
+
+.body-bottom > button{
+    width: 80% !important;
+}
+
+.body-bottom-view1{
+    text-align: center;
+    font-size: 14px;
+}
+

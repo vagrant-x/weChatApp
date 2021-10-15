@@ -70,18 +70,59 @@ Page({
     onShareAppMessage: function () {
 
     },
-    //点击拍摄身份证正面
-    click_image_zm: function(){
-        console.log("点击：click_image_zm")
-        this.setData({
-            show_zm_delete_image: true
+    //点击拍摄身份证正反面 people:人， nationalEmblem:国徽
+    click_image: function (event) {
+        let this_page = this
+        console.log("event:", event)
+        let type = event.currentTarget.dataset.imgType
+
+        wx.chooseImage({
+            count: 1,
+            sizeType: ['original', 'compressed'],
+            sourceType: ['album', 'camera'],
+            success(res) {
+                // tempFilePath可以作为img标签的src属性显示图片
+                const tempFilePaths = res.tempFilePaths
+                console.log("tempFilePaths: ", tempFilePaths)
+                // 根据点击的图片设置对应保存的url
+                if(type == "people"){
+                    this_page.data.url.url_idCard_zm_tmp = tempFilePaths[0]
+                    this_page.setData({
+                        url: this_page.data.url,
+                        show_zm_delete_image: true
+                    })
+                }else{
+                    this_page.data.url.url_idCard_fm_tmp = tempFilePaths[0]
+                    this_page.setData({
+                        url: this_page.data.url,
+                        show_fm_delete_image: true
+                    })
+                }
+            }
         })
     },
-    //点击拍摄身份证反面
-    click_image_fm: function(){
-        console.log("点击 click_image_fm")
-        this.setData({
-            show_fm_delete_image: true
+    //点击删除身份证反面
+    click_delete_image: function(event){
+        let this_page = this
+        console.log("event:", event)
+        let type = event.currentTarget.dataset.imgType
+        if(type == "people"){
+            this_page.data.url.url_idCard_zm_tmp = this_page.data.url.url_idCard_zm
+            this_page.setData({
+                url: this_page.data.url,
+                show_zm_delete_image: false
+            })
+        }else{
+            this_page.data.url.url_idCard_fm_tmp = this_page.data.url.url_idCard_fm
+            this_page.setData({
+                url: this_page.data.url,
+                show_fm_delete_image: false
+            })
+        }
+    },
+    next_page: function(){
+        wx.redirectTo({
+          url: '/pages/bank_card/input_information/input_information',
         })
     },
 })

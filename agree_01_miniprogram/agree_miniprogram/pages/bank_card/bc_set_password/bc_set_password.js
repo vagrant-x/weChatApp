@@ -1,12 +1,11 @@
-// pages/bank_card/input_information/input_information.js
+// pages/bank_card/bc_set_password/bc_set_password.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        array: ['其他', '工程师', '公务员', '农民', '老师'],
-        index: 0,
+        isShowScanImage: false
     },
 
     /**
@@ -64,16 +63,25 @@ Page({
     onShareAppMessage: function () {
 
     },
-    bindPickerChange: function (e) {
-        console.log('picker发送选择改变，携带值为', e.detail.value)
+    click_image_scan1: function(){
         this.setData({
-          index: e.detail.value
+            isShowScanImage: false
         })
-      },
-      next_page: function(){
-        console.log("next_page")
-        wx.redirectTo({
-          url: '/pages/bank_card/bc_select_card/bc_select_card',
-        })
+        
     },
+    // 1.6.3以上模板组件写法
+  passInput(e){
+    let sixpass1 = this.selectComponent("#sixpass1");  //拿到密码组件
+    sixpass1.setAllData("123456");  //设置密码
+    if(sixpass1.data.allinput.length>=6){
+      console.log('已经完成'+sixpass1.data.allinput)
+    }else{
+      console.log('还差点 '+sixpass1.data.allinput)
+    }
+  },
+  next_page: function(){
+    wx.redirectTo({
+      url: '/pages/take_number/tnm_scan_idr/tnm_scan_idr',
+    })
+  },
 })

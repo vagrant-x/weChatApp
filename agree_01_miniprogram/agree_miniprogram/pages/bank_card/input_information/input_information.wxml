@@ -1,35 +1,43 @@
 <!--pages/bank_card/input_information/input_information.wxml-->
-<view>
-    <!-- 录入信息 -->
-    <view class="view-input-info">
-        <view>
-            <text>手机号码</text>
-            <input type="text" maxlength="11" placeholder="请输入手机号码" />
-        </view>
-        <view>
-            <text>电话号码</text>
-            <input type="text" placeholder="请输入" />
-        </view>
-        <view>
-            <picker header-text="请选择：" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
-                <view class="picker">
-                    <text decode="true">
-                        职业&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{array[index]}}
+<view class="body">
+    <view class="body-top">
+        <!-- 录入信息 -->
+        <view class="view-input-info">
+            <view>
+                <view class="placeholder" style="color:red;width:5vw;">*</view>
+                <text>手机号码</text>
+                <input type="text" maxlength="11" placeholder="请输入手机号码" />
+            </view>
+            <view>
+                <view class="placeholder" style="color:red;width:5vw;">*</view>
+                <text>电话号码</text>
+                <input type="text" placeholder="请输入" />
+            </view>
+            <view>
+                <view class="placeholder" style="color:red;width:5vw;">*</view>
+                <picker header-text="请选择：" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+                    <view class="picker">
+                        <text decode="true">
+                            职业&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{array[index]}}
                         </text>
-                </view>
-            </picker>
-        </view>
-        <view>
-            <text>居住地址</text>
-            <input type="text" placeholder="请输入" />
-        </view>
-        <view>
-            <text>邮政编码</text>
-            <input type="text" placeholder="请输入" />
+                    </view>
+                </picker>
+
+            </view>
+            <view>
+                <view class="placeholder" style="color:red;width:5vw;">*</view>
+                <text>居住地址</text>
+                <input type="text" placeholder="请输入" />
+            </view>
+            <view>
+                <view class="placeholder" style="color:red;width:5vw;">*</view>
+                <text>邮政编码</text>
+                <input type="text" placeholder="请输入" />
+            </view>
         </view>
     </view>
     <!-- 下一步按钮 -->
-    <view>
-        <button class="bt-next">下一步</button>
+    <view class="body-bottom">
+        <button bindtap="next_page" class="bt-next">下一步</button>
     </view>
 </view>

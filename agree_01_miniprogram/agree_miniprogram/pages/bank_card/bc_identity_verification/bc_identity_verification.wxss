@@ -1,0 +1,5 @@
+/* pages/bank_card/bc_identity_verification/bc_identity_verification.wxss */
+
+.body-top-view-tip{
+    text-align: center;
+}

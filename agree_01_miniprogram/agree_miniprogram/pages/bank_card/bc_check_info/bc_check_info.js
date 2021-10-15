@@ -1,12 +1,11 @@
-// pages/bank_card/input_information/input_information.js
+// pages/bank_card/bc_check_info/bc_check_info.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        array: ['其他', '工程师', '公务员', '农民', '老师'],
-        index: 0,
+
     },
 
     /**
@@ -64,16 +63,9 @@ Page({
     onShareAppMessage: function () {
 
     },
-    bindPickerChange: function (e) {
-        console.log('picker发送选择改变，携带值为', e.detail.value)
-        this.setData({
-          index: e.detail.value
-        })
-      },
-      next_page: function(){
-        console.log("next_page")
+    next_page: function(){
         wx.redirectTo({
-          url: '/pages/bank_card/bc_select_card/bc_select_card',
+          url: '/pages/bank_card/bc_signature/bc_signature',
         })
     },
 })

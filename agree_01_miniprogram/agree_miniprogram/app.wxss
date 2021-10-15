@@ -7,4 +7,32 @@
   justify-content: space-between;
   padding: 200rpx 0;
   box-sizing: border-box;
-} 
+}
+
+/** 设置按钮在手机底部 **/
+.body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.body-top {
+  flex-grow: 1;
+}
+
+.body-bottom {
+  height: 60px;
+}
+.bt-next{
+  background-color: rgb(163, 158, 236);
+}
+/** 
+<view class="body">
+    <view class="body-top">
+    </view>
+    <!-- 下一步按钮 -->
+    <view class="body-bottom">
+        <button class="bt-next">下一步</button>
+    </view>
+</view>
+**/

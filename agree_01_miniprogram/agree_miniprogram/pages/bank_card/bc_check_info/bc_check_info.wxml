@@ -1,0 +1,41 @@
+<!--pages/bank_card/bc_check_info/bc_check_info.wxml-->
+<view class="body">
+    <view class="body-top">
+        <view class="body-top-view">
+            <text class="view_first_text" decode="true">姓名&nbsp;</text>
+            <text  class="view_second_text">李文海</text>
+        </view>
+        <view class="body-top-view">
+            <text class="view_first_text" decode="true">身份证号&nbsp;</text>
+            <text  class="view_second_text">112002198205302213</text>
+        </view>
+        <view class="body-top-view">
+            <text class="view_first_text" decode="true">手机号码&nbsp;</text>
+            <text  class="view_second_text">13642330012</text>
+        </view>
+        <view class="body-top-view">
+            <text class="view_first_text" decode="true">电话号码&nbsp;</text>
+            <text  class="view_second_text">020-60123022</text>
+        </view>
+        <view class="body-top-view">
+            <text class="view_first_text" decode="true">职业&nbsp;</text>
+            <text  class="view_second_text">前端工程师</text>
+        </view>
+        <view class="body-top-view body-top-view-addr" >
+            <view><text   class="view_first_text" decode="true">居住地址&nbsp;</text></view>
+            <view><text  class="view_second_text">广州市越秀区北京路52号边城大厦1102</text></view>
+        </view>
+                <view class="body-top-view">
+            <text class="view_first_text" decode="true">邮政编码&nbsp;</text>
+            <text  class="view_second_text">510000</text>
+        </view>
+    </view>
+    <!-- 下一步按钮 -->
+    <view class="body-bottom">
+        <button bindtap="next_page" class="bt-next">信息正确，签名确认</button>
+        <view class="body-bottom-view1">
+            <icon type="warn" size="20"></icon>
+            <text>若信息有误，请退出或联系工作人员</text>
+        </view>
+    </view>
+</view>

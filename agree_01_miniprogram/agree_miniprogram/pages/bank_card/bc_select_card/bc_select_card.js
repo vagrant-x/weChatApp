@@ -1,12 +1,19 @@
-// pages/bank_card/input_information/input_information.js
+// pages/bank_card/bc_select_card/bc_select_card.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        array: ['其他', '工程师', '公务员', '农民', '老师'],
-        index: 0,
+        background: ['demo-text-1', 'demo-text-2', 'demo-text-3'],
+        indicatorDots: true, //显示面板指示点
+        vertical: false, //滑动方向是否为纵向
+        autoplay: false, //是否自动切换
+        circular: false, // 是否采用衔接滑动
+        interval: 3000, // 自动切换时间间隔
+        duration: 500, // 滑动动画时长
+        previousMargin: 0, //前边距，可用于露出前一项的一小部分，接受 px 和 rpx 值
+        nextMargin: 0 // 后边距，可用于露出后一项的一小部分，接受 px 和 rpx 值
     },
 
     /**
@@ -64,16 +71,9 @@ Page({
     onShareAppMessage: function () {
 
     },
-    bindPickerChange: function (e) {
-        console.log('picker发送选择改变，携带值为', e.detail.value)
-        this.setData({
-          index: e.detail.value
-        })
-      },
-      next_page: function(){
-        console.log("next_page")
+    next_page: function(){
         wx.redirectTo({
-          url: '/pages/bank_card/bc_select_card/bc_select_card',
+          url: '/pages/bank_card/bc_set_password/bc_set_password',
         })
-    },
+    }
 })

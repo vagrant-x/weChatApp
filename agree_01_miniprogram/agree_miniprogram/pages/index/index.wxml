@@ -21,3 +21,7 @@
     <text class="user-motto">{{motto}}</text>
   </view>
 </view>
+<!-- 下一步按钮 -->
+<view class="body-bottom">
+  <button class="bt-next">下一步</button>
+</view>

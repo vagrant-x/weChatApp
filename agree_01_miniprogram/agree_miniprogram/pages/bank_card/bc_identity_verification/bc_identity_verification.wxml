@@ -1,0 +1,21 @@
+<!--pages/bank_card/bc_identity_verification/bc_identity_verification.wxml-->
+<view class="body">
+    <view class="body-top">
+        <!-- 拍摄客户本人半身照 -->
+        <view wx:if="{{isShowTakePhoto}}">
+            <image bindtap="click_image_take_photo" mode="widthFix" src="../../../resource/img/bank_card/u140.png"></image>
+        </view>
+        <!-- 核查通过信息 -->
+        <view  wx:if="{{!isShowTakePhoto}}">
+            <image mode="widthFix" src="../../../resource/img/bank_card/u141.png"></image>
+            <view class="body-top-view-tip">
+                <icon type="success" size="20px"></icon>
+                <text>核查通过</text>
+            </view>
+        </view>
+    </view>
+    <!-- 下一步按钮 -->
+    <view class="body-bottom">
+        <button bindtap="next_page" class="bt-next">下一步</button>
+    </view>
+</view>

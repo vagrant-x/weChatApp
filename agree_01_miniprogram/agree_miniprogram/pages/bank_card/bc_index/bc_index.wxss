@@ -6,7 +6,11 @@
 .view-idr{
     display: flex;
     flex-direction: row;
-    /* width: 80%; */
+}
+.view-idr-image{
+    width: 90%; 
+    height: 190px !important;
+    /* transform:rotate(-90deg); */
 }
 .view-idr-v1 > image{
     width: 100%;

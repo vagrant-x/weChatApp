@@ -7,7 +7,7 @@ Page({
     data: {
         controllerId: "",  //网关id
         readingIdCadr: true,
-        token: "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiYWRhYXMiXSwidXNlcl9uYW1lIjoiYWRtaW4iLCJzY29wZSI6WyJkZXZpY2UiXSwiZXhwIjoxNjM0MTM2MjYxLCJhdXRob3JpdGllcyI6WyJzdXBlcl9tYW5hZ2VyIl0sImp0aSI6IjNiOTBhNGZlLWU4OGUtNDU4Yy04OTZiLTY5ZTNjYjE1ZTVlOSIsImNsaWVudF9pZCI6ImNsaWVudF9wYXNzd29yZCJ9.ZlX9cpfqCrm-kVyou4QEdUe-9Q2YGIkOeQ-bVNhKnZ8mUi1hAJ5XxElBYpYSZONmXXyx2L8pDVpOJwqqaMWRfRAOStOFrTTP34rofSJONrsE8KW207hbx5gGn_ujbnKAiox55esnly-loKwCLshiy0Tupz8Xk1Ms49rUl_K9WlbgoqmZRoQLdS7ZLwc-FJe_S45_PXL2T7VGzIq8Z7SQyb-W3DZzX4FY9A7n0gyIqqcs3hjyIrOAHz-_yqHmO0cR-et3cvmPQW-qI8omaVFJxLBlsz5q6Hu8iLhA5wbO73Ifl7DvbJm7v3h2ltFU4DgIU8rAGJ91xr5SnpaN9aO7vA",
+        token: "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiYWRhYXMiXSwidXNlcl9uYW1lIjoiYWRtaW4iLCJzY29wZSI6WyJkZXZpY2UiXSwiZXhwIjoxNjM0MzQ1OTYwLCJhdXRob3JpdGllcyI6WyJzdXBlcl9tYW5hZ2VyIl0sImp0aSI6IjFmMmFiODU1LTI2ZGItNGJmOS1iNjViLTFiOGRhNDcwZjM1ZiIsImNsaWVudF9pZCI6ImNsaWVudF9wYXNzd29yZCJ9.joz9PJulV0VCLalcf9cpU4yshjp-FtGKxNMeamwsTmD7ZsgW7HyIm7gxm5vxve5EYeHoajAFzHHwulievwHOFZOIwJ2Gy6dAuhOKonPhlyuu4cqJyi3kuDIdYG4JigB_VP9iuTLSo_MNph3OfKfTGu119u6rO2TEvbWSkS6dtLLvo89oo4n1sg6i2xhJnvH4o_qvZZxQ9aIOUHi9VbYlqq5oX8yd1taDW44usSCbUxevKsF85ijcbdhOin_Pe-mEJsQunXn7V_NwANFx0naogPG3oXRUfBGJF6Tzf8DfLCWA2SkMZDCZP5frakOn0K_6k4VNXGX8miy8x0khfCVZLQ",
         userInfo: {
             // address: "广州市天河区华穗路398号冼村街公共集体户",
             // birthday: "19930417",
@@ -27,7 +27,7 @@ Page({
     onLoad: function (options) {
         this.data.controllerId = options.controllerId //保存网关ID
         let app = getApp()
-        this.data.token =  app.globalData.token  //设置获取的token到本页面
+        // this.data.token =  app.globalData.token  //设置获取的token到本页面
         console.log(`controllerId = ${this.data.controllerId}`)
         this.call_idr()  //调用身份证模块
     },
