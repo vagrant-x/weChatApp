@@ -1,0 +1,79 @@
+/* pages/item1/home/homeContent/homeContent.wxss */
+.titleView{
+    position: fixed;
+    width: 100%;
+    height: 200px;
+    top: 0;
+}
+.headerView{
+    width: 100%;
+    height: 100rpx;
+    background-color: #1AABAB;
+    text-align: center;
+}
+.textArea{
+    display: inline-block;
+    background-color: #ffffff;
+    height: 20%;
+    width: 70%;
+    border-radius: 30rpx;
+    font: 10rpx;
+    text-align: center;
+    margin-top: 2%;
+    top: 0rpx;
+}
+.placeholderClass{
+    font-size: 25rpx;
+}
+/* 搜索导航样式 */
+.changeV{
+    display: flex;
+    flex-direction: row;
+    background-color: #f0f0f0;
+}
+.change{
+    display: inline-block;
+    width: 25%;
+    text-align: center;
+    margin-top: 10rpx;
+    margin-bottom: 10rpx;
+    font-size: 30rpx;
+}
+
+/* 主体样式 */
+.contentTR{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    margin-top: 160rpx;
+    margin-bottom: 20rpx;
+}
+.contentTD{
+    width: 45%;
+    text-align: center;
+    margin-top: 5%;
+    margin-right: 2.5%;
+    margin-left: 2.5%;
+    background-color: #E1E1E1;
+}
+.contentIMG{
+    width: 100%;
+    height: 200rpx;
+    display: block;
+    margin: 0 auto;
+}
+.contentTitle{
+    display: block;
+    font-size: 25rpx;
+    font-weight: bold;
+    margin: 5rpx 0;
+    font-family: "Cooper Black";
+}
+.contentTX{
+    font-size: 25rpx;
+    font-weight: lighter;
+    margin: 10% 10%;
+    /* 实现两端对齐文本效果  改变字与字之间的间距使得每行对齐 */
+    text-align: justify;
+    text-justify: inter-word;
+}

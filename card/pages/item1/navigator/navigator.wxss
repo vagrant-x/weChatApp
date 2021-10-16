@@ -1,0 +1,4 @@
+/* pages/item1/navigator/navigator.wxss */
+.hoverClass{
+    color: red;
+}

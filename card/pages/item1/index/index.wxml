@@ -1,0 +1,2 @@
+<!--pages/item1/index/index.wxml-->
+<button type="primary" class="button1" bindtap="callFunc" data-callUrl="/pages/item1/template/template">组件：template</button>

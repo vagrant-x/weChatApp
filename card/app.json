@@ -1,19 +1,44 @@
 {
   "pages":[
-    "pages/newsList/newsList",
+    "pages/item1/home/homeContent/payContent/payContent",
+    "pages/item1/home/homeContent/homeDetail/homeDetail",
+    "pages/item1/home/home",
+    "pages/item1/home/homeContent/homeContent",
+    "pages/item1/navigator/navigator",
     "pages/all/all",
+    "pages/item1/index/index",
+    "pages/item1/template/template",
+    "pages/item1/order/order",
+    "pages/item1/info/info",
+    "pages/index/index",
+    "pages/newsList/newsList",
     "pages/test2/test2",
     "pages/test/test",
-    "pages/index/index",
     "pages/logs/logs"
   
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#1AABAB",
     "navigationBarTitleText": "我的头条",
     "navigationBarTextStyle":"black"
   },
   "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/item1/home/home",
+      "text": "首页"
+    }, {
+      "pagePath": "pages/item1/order/order",
+      "text": "订单"
+    }, {
+      "pagePath": "pages/item1/info/info",
+      "text": "个人"
+    },
+    {
+      "pagePath": "pages/all/all",
+      "text": "测试1"
+    }]
+  }
 }

@@ -1,0 +1,130 @@
+/* pages/item1/home/homeContent/homeDetail/homeDetail.wxss */
+page{
+    background-color: #fefefe;
+}
+.introduce{
+    width: 100%-40rpx;
+    background-color: #fff;
+    margin-top: 5rpx;
+    padding: 20rpx 20rpx;
+}
+.nameTx{
+    font-size: 30rpx;
+    text-align: left;
+    display: block;
+    line-height: 35rpx;
+}
+.priceTx{
+    color: #1AABAB;
+    font-size: 32rpx;
+    display: block;
+    margin-top: 20rpx;
+}
+
+/* <!-- 尺寸 --> */
+.specification{
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    width: 100%;
+    /* height: 300rpx; */
+    background-color: #fff;
+    margin-top: 20rpx;
+}
+.oneSpecification{
+    width: 60rpx;
+    height: 50rpx;
+    background-color: #fff;
+    color: #9d9d9d;
+    font-size: 24rpx;
+    margin: 20rpx 15rpx;
+    line-height: 45rpx;
+    text-align: center;
+
+}
+.specificationBT{
+    width: 60rpx;
+    height: 50rpx;
+    font-size: 26rpx;
+    margin: 20rpx 15rpx;
+    line-height: 50rpx;
+    text-align: center;
+    color: #000000;
+}
+.countClass{
+    display: flex;
+    flex-direction: row;
+}
+.jiajianBT{
+    width: 60rpx;
+    height: 60rpx;
+    background-color: #EFEFEF;
+    margin: 20rpx 0;
+    border-radius: 10rpx;
+    line-height: 50rpx;
+    text-align: center;
+    font-size: 26rpx;
+    color: #000000;
+    float: left;
+}
+.inputTX{
+    background-color: #EFEFEF;
+    width: 100rpx;
+    height: 60rpx;
+    margin: 20rpx -2rpx;
+    border-radius: 10rpx;
+    line-height: 40rpx;
+    text-align: center;
+    font-size: 26rpx;
+}
+.amout{
+    display: block;
+    background-color: #EFEFEF;
+    width: 400rpx;
+    height: 52rpx;
+    margin: 20rpx 15rpx;
+    border-radius: 10rpx;
+    font-size: 26rpx;
+    line-height: 50rpx;
+    padding-left: 20rpx;
+}
+.addressClass{
+    background-color: #ffffff;
+    width: 100%;
+    margin-top: 20rpx;
+    font-size: 30rpx;
+    line-height: 50rpx;
+    padding: 0 20rpx;
+    text-decoration: underline;
+}
+
+.addView{
+    width: 100%;
+    height: 1000rpx;
+}
+.payView{
+    width: 100%;
+    height: 80rpx;
+    position: fixed;
+    bottom: 0rpx;
+}
+.payCarBt{
+    width: 50%;
+    height: 80rpx;
+    display: inline-block;
+    background-color: #E7D17F;
+    text-align: center;
+    line-height: 80rpx;
+    color: #ffffff;
+    font-size: 32rpx;
+}
+.payBt{
+    width: 50%;
+    height: 80rpx;
+    display: inline-block;
+    background-color: #1AABAB;
+    text-align: center;
+    line-height: 80rpx;
+    color: #ffffff;
+    font-size: 32rpx;
+}

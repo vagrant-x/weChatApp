@@ -1,0 +1,40 @@
+<!--pages/item1/home/homeContent/homeDetail/homeDetail.wxml-->
+<swiper indicator-dots="true" autoplay="true" style="height: 500rpx;">
+    <block wx:for="{{imageArr}}">
+        <swiper-item>
+            <image src="{{item}}" class="slide-image"></image>
+        </swiper-item>
+    </block>
+</swiper>
+
+<view class="introduce">
+    <text class="nameTx">New Balance/NB 996系列男鞋女鞋复古鞋休闲鞋运动鞋跑鞋</text>
+    <text class="priceTx">399RMB</text>
+</view>
+
+<view>
+    <view class="specification">
+        <!-- 尺寸 -->
+        <view class="oneSpecification">尺寸</view>
+        <view class="specificationBT" style="background-color: {{item.color}};" wx:for="{{BTarr}}" id="{{index}}"
+            bindtap="chose">{{item.size}}</view>
+    </view>
+
+    <!-- 数量 -->
+    <view class="countClass">
+        <view class="oneSpecification">数量</view>
+        <view id="1" class="jiajianBT" bindtap="numberChange">-</view>
+        <input class="inputTX" placeholder="{{numberItem}}" />
+        <view id="2" class="jiajianBT"  bindtap="numberChange">+</view>
+        <view class="amout">已经选择{{numberItem}}件 {{numberSize}} 码商品</view>
+    </view>
+
+    <view class="addressClass">邮寄地址：广州天河区星汇国际大厦25楼</view>
+</view>
+
+<view class="addView"></view>
+
+<view class="payView">
+    <view class="payCarBt">加入购物车</view>
+    <view class="payBt" bindtap="payContent">立即购买</view>
+</view>

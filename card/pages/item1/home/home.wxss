@@ -1,0 +1,65 @@
+/* pages/item1/home/home.wxss */
+.headerView{
+    width: 100%;
+    height: 200rpx;
+    background-color: #1AABAB;
+    text-align: center;
+}
+.textArea{
+    display: inline-block;
+    background-color: #ffffff;
+    height: 20%;
+    width: 70%;
+    border-radius: 30rpx;
+    font: 10rpx;
+    text-align: center;
+    margin-top: 5%;
+    top: 0rpx;
+}
+.placeholderClass{
+    font-size: 25rpx;
+}
+.recommenView{
+    width: 70%;
+    margin-left: 15%;
+    text-align: left;
+}
+.navigatorClass{
+    display: inline-block;
+    text-decoration: underline;
+    margin-left: 30rpx;
+    margin-top: 20rpx;
+    color: #4C4C4C;
+    font-size: 30rpx;
+}
+
+.contentView{
+    width: 100%;
+    /* height: 1000rpx;
+    background-color: lightyellow; */
+    /* margin-top: 220px; */
+}
+.oneContent{
+    width: 100%;
+    margin-top: 5%;
+    text-align: center;
+}
+.contentIMG{
+    width: 80%;
+    /* height: 140rpx; */
+    display: block;
+    margin: 0 auto;
+}
+.contentTitle{
+    display: block;
+    font-size: 40rpx;
+    font-weight: bold;
+    margin: 8rpx 0;
+}
+.contentTX{
+    font-size: 30rpx;
+    font-weight: lighter;
+    margin: 14rpx 10%;
+    text-align: justify;
+    text-justify: inter-word;
+}

@@ -1,0 +1,3 @@
+<!--pages/item1/navigator/navigator.wxml-->
+
+<navigator hover-class="hoverClass" url="../template/template">navigator to template</navigator>

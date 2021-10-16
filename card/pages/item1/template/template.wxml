@@ -1,0 +1,20 @@
+<!--pages/item1/template/template.wxml-->
+
+<!-- 
+使用 name 属性，作为模板的名字。然后在<template/>内定义代码片段 
+
+模板拥有自己的作用域，只能使用 data 传入的数据以及模板定义文件中定义的 <wxs /> 模块。
+-->
+<template name="msgItem">
+    <view>
+        <text>{{index}} ：{{msg}}</text>
+        <view>
+            <text>Time: {{time}}</text>
+        </view>
+    </view>
+</template>
+
+<!-- 使用 is 属性，声明需要的使用的模板，然后将模板所需要的 data 传入 -->
+<block wx:for="{{t_data_list}}" wx:for-item="dataItem">
+<template is="{{template_name}}" data="{{...dataItem}}"></template>
+</block>

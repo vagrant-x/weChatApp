@@ -1,0 +1,20 @@
+<!--pages/item1/home/home.wxml-->
+<view class="headerView">
+    <input bindconfirm="searchOrder" class="textArea" type="text" placeholder="请输入商品搜索" placeholder-class="placeholderClass" />
+    <view class="recommenView">
+        <navigator url="homeContent/homeContent" class="navigatorClass" wx:for="{{productArr}}" wx:key="*this">{{item}}</navigator>
+    </view>
+</view>
+
+<view class="contentView">
+    <view class="oneContent" wx:for="{{productArr}}" wx:key="*this">
+        <navigator url="homeContent/homeContent">
+            <image mode="widthFix" src="../../../img/20160325.jpg" class="contentIMG"></image>
+
+            <text class="contentTitle">鸿星尔克</text>
+            <view class="contentTX">
+                鸿星尔克实业有限公司（ERKE）创立于2000年6月，总部位于福建省厦门市。已发展为集研发、生产、销售为一体，员工近3万人的大型运动服饰企业。公司在全世界拥有店铺7000余家，产品行销欧洲、东南亚、中东、南北美洲、非洲等国家和地区，在全球100多个国家拥
+            </view>
+        </navigator>
+    </view>
+</view>

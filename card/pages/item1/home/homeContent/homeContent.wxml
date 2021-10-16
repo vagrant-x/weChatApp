@@ -1,0 +1,29 @@
+<!--pages/item1/home/homeContent/homeContent.wxml-->
+
+<!-- 顶部内容 -->
+<view class="titleView">
+    <!-- 搜索框 -->
+    <view class="headerView">
+        <input bindconfirm="searchOrder" class="textArea" type="text" placeholder="请输入商品搜索"
+            placeholder-class="placeholderClass" />
+    </view>
+
+    <!-- 筛选导航 -->
+    <view class="changeV">
+        <view class="change">综合</view>
+        <view class="change">销量</view>
+        <view class="change">价格</view>
+        <view class="change">好评率</view>
+    </view>
+</view>
+
+<!-- 主体内容 -->
+<view class="contentTR">
+    <view class="contentTD" wx:for="{{[1,2,3,4,5, 6,7]}}" wx:key="*this">
+        <navigator url="homeDetail/homeDetail">
+            <image class="contentIMG" src="../../../../img/cover.png"></image>
+            <text class="contentTitle">腾讯课堂</text>
+            <view class="contentTX">腾讯课堂-腾讯推出的专业职业培训在线教育平台,聚合大量优质教育机构和名师...</view>
+        </navigator>
+    </view>
+</view>
