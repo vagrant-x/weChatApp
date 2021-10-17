@@ -8,14 +8,6 @@ Page({
         number: 0,
         s_data: ""
     },
-    callFunc: function(event){
-        console.log("调用返回event:", event);
-        let url = event.currentTarget.dataset.callurl;
-        console.log("url:", url)
-        wx.navigateTo({
-            url: url,
-          })
-    },
     save_storage: function () {
         let this_page = this
         wx.setStorage({

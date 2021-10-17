@@ -1,2 +1,15 @@
 <!--pages/item1/info/info.wxml-->
-<text>pages/item1/info/info.wxml</text>
+
+<view class="iconView">
+    <image src="{{info.avatarUrl}}" class="iconImage"></image>
+    <view class="nameContent">{{info.nickName}}</view>
+</view>
+
+<!-- 收获地址 -->
+<navigator url="/pages/item1/info/addressView/addressView">
+    <view class="addressView">
+        <image class="addressImage" src="../../../img/address.jpg"></image>
+        <view class="addressTitle">添加收货地址</view>
+        <image class="rightImage" src="../../../img/right.jpg"></image>
+    </view>
+</navigator>

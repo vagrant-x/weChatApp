@@ -1,27 +1,20 @@
-// pages/item1/info/info.js
+// pages/item1/info/addressView/addressView.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        info: {}
-    },
 
+    },
+    addAddress: function(){
+        console.log("添加收货地址， textArea 失去焦点")
+    },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        let this_page = this
-        wx.getStorage({
-            key: "userInfo",
-            success(res) {
-                console.log(res.data)
-                this_page.setData({
-                    info: res.data
-                })
-            }
-        })
+
     },
 
     /**

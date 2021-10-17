@@ -1,0 +1,5 @@
+<!--pages/item1/info/addressView/addressView.wxml-->
+
+<textarea class="addressTX" placeholder="请填写您的收货信息详细地址 ++ 收件人姓名 ++ 手机号码" bindblur="addAddress" bindblur="addAddress"></textarea>
+
+<button class="addressBT" >添加收货信息</button>

@@ -1,0 +1,6 @@
+<!--pages/item1/order/storage/storage.wxml-->
+<button bindtap="save_storage">storage保存数据</button>
+<button bindtap="get_storage">storage获取数据</button>
+<button bindtap="clear_storage">storage清除数据</button>
+
+<view>获取的数据：{{s_data}}</view>

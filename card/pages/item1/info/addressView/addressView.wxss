@@ -1,0 +1,17 @@
+/* pages/item1/info/addressView/addressView.wxss */
+.addressTX{
+    width: 80%;
+    height: 300rpx;
+    background-color: #E3EBF6;
+    border-radius: 20rpx;
+    margin: 20rpx 5%;
+    padding: 20rpx 5%;
+    font-size: 28rpx;
+
+}
+.addressBT{
+    background-color: #27AAA6;
+    width: 90%;
+    margin: 20rpx 5%;
+    font-size: 28rpx;
+}

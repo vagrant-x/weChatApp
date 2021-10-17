@@ -1,2 +1,3 @@
 <!--pages/item1/order/order.wxml-->
-<text>pages/item1/order/order.wxml</text>
+
+<button type="primary" class="button1" bindtap="callFunc" data-callUrl="/pages/item1/order/storage/storage">组件：template</button>

@@ -1,2 +1,25 @@
 <!--pages/item1/home/homeContent/payContent/payContent.wxml-->
-<text>pages/item1/home/homeContent/payContent/payContent.wxml</text>
+
+<view class="addressContent">
+    收货地址：广东省 广州市 天河区 星汇国际大厦25楼
+</view>
+
+<view class="statusContent">
+    <view class="orderStatus">
+        状态：
+        <text class="statusTX">待支付</text>
+    </view>
+    <view class="orderStatus">
+        总价：
+        <text class="priceTX">$100</text>
+    </view>
+</view>
+
+<view class="content">
+    <image class="orderImage" src="../../../../../img/cover.png"></image>
+    <view class="orderContent">New Balance/NB 996系列男鞋女鞋复古鞋休闲鞋运动鞋跑鞋</view>
+    <view class="nemberText">1件</view>
+</view>
+
+<button class="wechatPayBT">微信支付</button>
+<button class="unPayBT">支付宝支付</button>
