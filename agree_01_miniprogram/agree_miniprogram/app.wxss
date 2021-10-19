@@ -35,7 +35,9 @@
   color: #ffffff;
   font-size: 36rpx;
 }
-
+.bt-next-click {
+  opacity: 1;
+}
 /** 
 <view class="body">
     <view class="body-top">

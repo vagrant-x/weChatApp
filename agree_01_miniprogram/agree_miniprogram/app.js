@@ -16,7 +16,7 @@ App({
   },
   globalData: {
     img_service: "https://www.xiongweixp.tech",
-    userInfo: null,
+    userInfo: {},
     token: null
   },
 })

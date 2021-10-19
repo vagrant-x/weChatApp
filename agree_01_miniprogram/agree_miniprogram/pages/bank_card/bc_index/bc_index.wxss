@@ -65,7 +65,6 @@ view>image.image-delete {
     margin-left: 30rpx;
 }
 
-.bt-next-click {
-    /* background-color: rgb(163, 158, 236); */
+/* .bt-next-click {
     opacity: 1;
-}
+} */

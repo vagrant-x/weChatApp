@@ -1,21 +1,65 @@
 /* pages/bank_card/input_information/input_information.wxss */
+page {
+    background-color: #F2F3F5;
+}
 
-.view-input-info > view{
+.view-input-info>view {
+    /* margin-left: 15px; */
+    height: 100rpx;
     display: flex;
-    margin-left: 15px;
     margin-top: 15px;
-}
-.view-input-info > view > text{
-    margin-right: 10px;
-}
-
-
-
-.bt-next{
-    background-color: rgb(163, 158, 236);
+    align-items: center;
+    background-color: #ffffff;
 }
 
-/* .class-view-picker{
+.placeholder {
+    width: 14rpx;
+    /* height: 16rpx; */
+    /* height: 100%; */
+    margin-left: 32rpx;
+    /* text-align: center;
+    align-items: center;
+    justify-content: center; */
+}
+
+.view-input-info>view>text {
+    margin-right: 32rpx;
+    width: 144rpx;
+    height: 50rpx;
+    font-size: 36rpx;
+    font-family: PingFang SC;
+    font-weight: 400;
+    /* line-height: 32rpx; */
+    color: #333333;
+    opacity: 1;
+}
+
+.view-input-info>view>input {
+    margin-right: 32rpx;
+    /* width: 224rpx; */
+    height: 50rpx;
+    font-size: 36rpx;
+    font-family: PingFang SC;
+    font-weight: 400;
+    line-height: 32rpx;
+    color: #333333;
+    opacity: 1;
+}
+
+.picler-text1 {
+    margin-right: 32rpx;
+    width: 144rpx;
+    height: 50rpx;
+    font-size: 36rpx;
+    font-family: PingFang SC;
+    font-weight: 400;
+    color: #333333;
+    opacity: 1;
+    text-align: left;
+}
+.my-picker-class{
+    height: 50rpx;
+    text-align: center;
     display: flex;
-    justify-content: center;
-} */
+    align-items: center;
+}
