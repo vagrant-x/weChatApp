@@ -5,7 +5,12 @@ Page({
      * 页面的初始数据
      */
     data: {
-        isShowScanImage: false
+      url:{
+        url_scan_image: getApp().globalData.img_service + "/miniprogramImg/img_kaika/0501.png",
+        url_success_image: getApp().globalData.img_service + "/miniprogramImg/img_kaika/0601.png",
+      },
+        isShowScanImage: false, // 是否显示进行扫描图片
+        isShowSuccess: true, // 是否显示设置密码成功提示信息
     },
 
     /**
@@ -76,10 +81,21 @@ Page({
     if(sixpass1.data.allinput.length>=6){
       console.log('已经完成'+sixpass1.data.allinput)
     }else{
+      sixpass1.setWidthHeight({
+        "width": 180,
+        "height":30
+      })
       console.log('还差点 '+sixpass1.data.allinput)
     }
   },
   next_page: function(){
+    // console.log('还差点 ')
+    // let sixpass1 = this.selectComponent("#sixpass1");  //拿到密码组件
+    // sixpass1.setWidthHeight({
+    //   "width": 180,
+    //   "height":30
+    // })
+    // sixpass1.setBackgroundColor("red")
     wx.navigateTo({
       url: '/pages/take_number/tnm_scan_idr/tnm_scan_idr',
     })

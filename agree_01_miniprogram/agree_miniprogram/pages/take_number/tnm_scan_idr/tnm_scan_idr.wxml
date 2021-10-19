@@ -1,8 +1,8 @@
 <!--pages/take_number/tnm_scan_idr/tnm_scan_idr.wxml-->
 
 <!-- 提示用刷身份证 -->
-<view wx:if="{{readingIdCadr}}">
-    <image  mode="widthFix"  src="../../../resource/img/idr.png"></image>
+<view class="view-scan" wx:if="{{readingIdCadr}}">
+    <image class="view-scan-image1"  mode="widthFix"  src="{{url.url_scan_image}}"></image>
     <view class="text-tips">请将身份证放置于读卡器上方</view>
 </view>
 <!-- 显示用户身份证信息 -->

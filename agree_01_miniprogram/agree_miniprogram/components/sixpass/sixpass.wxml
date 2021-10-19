@@ -8,7 +8,8 @@
 			</view>
 		</view>
 		<view class="indexTopInput">
-			<input value="{{inputStr}}" focus="{{allinputF1}}" maxlength="6" type="number" bindinput="passInput"/>
+			<!-- <input value="{{inputStr}}" focus="{{allinputF1}}" maxlength="6" type="number" bindinput="passInput"/> -->
+			<input value="{{inputStr}}" maxlength="6" type="number" bindinput="passInput"/>
 		</view>
 	</view>
 </view>

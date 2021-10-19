@@ -76,6 +76,7 @@ Component({
       console.log(this.data.inputStr)
       this.setData({allinputF1:true})
     },
+    // 通过方法设置密码的宽高
     setWidthHeight(data){
       console.log(data)
       let width = data["width"]
@@ -85,11 +86,13 @@ Component({
         rpx_height: height
       })
     },
+    // 通过方法设置背景颜色
     setBackgroundColor(color){
       this.setData({
         background_color: color
       })
     },
+    // 通过方法填充所有密码
     setAllData(data){
         // console.log("将所有数据设置为：", data)
         this.allinput = data

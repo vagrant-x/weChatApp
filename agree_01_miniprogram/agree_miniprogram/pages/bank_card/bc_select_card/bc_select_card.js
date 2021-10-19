@@ -5,6 +5,7 @@ Page({
      * 页面的初始数据
      */
     data: {
+        bt_class_next: "", // 按钮样式
         background: ['demo-text-1', 'demo-text-2', 'demo-text-3'],
         indicatorDots: true, //显示面板指示点
         vertical: false, //滑动方向是否为纵向

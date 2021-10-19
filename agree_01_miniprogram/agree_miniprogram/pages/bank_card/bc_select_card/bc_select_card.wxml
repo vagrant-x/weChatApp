@@ -27,6 +27,6 @@
     </view>
     <!-- 下一步按钮 -->
     <view class="body-bottom">
-        <button bindtap="next_page" class="bt-next">下一步</button>
+        <button bindtap="next_page" class="bt-next {{bt_class_next}}">选择此卡</button>
     </view>
 </view>

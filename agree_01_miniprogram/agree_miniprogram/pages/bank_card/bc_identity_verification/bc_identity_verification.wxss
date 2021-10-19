@@ -1,5 +1,102 @@
 /* pages/bank_card/bc_identity_verification/bc_identity_verification.wxss */
+page {
+    background: #F2F3F5;
+}
 
-.body-top-view-tip{
+.view-people {
+    display: flex;
+    flex-direction: row;
+}
+
+.view-people-view1 {
+    margin-top: 98rpx;
+    margin-left: 98rpx;
+    /* 设置宽高将view 撑起来 */
+    width: 558rpx !important;
+    height: 680rpx !important;
+    /* border: 2rpx solid gray; */
+    background: #FFFFFF;
+    opacity: 1;
+    border-radius: 16rpx;
+}
+
+.view-people-image {
+    margin-top: 106rpx;
+    margin-left: 64rpx;
+    width: 428rpx !important;
+    height: 470rpx !important;
+    position: absolute;
+    /* transform:rotate(-90deg); */
+    z-index: 1;
+}
+
+.view-people-image-camera {
+    margin-top: 246rpx;
+    margin-left: 220rpx;
+    width: 114rpx;
+    height: 96rpx !important;
+    z-index: 2;
+    position: absolute;
+}
+
+.view-people-text {
+    z-index: 3;
+    position: absolute;
+    width: 324rpx;
+    height: 50rpx;
+    font-size: 36rpx;
+    font-family: PingFang SC;
+    font-weight: 600;
+    line-height: 54rpx;
+    color: #3FCBCA;
+    opacity: 1;
+    margin-left: 118rpx;
+    margin-top: 370rpx;
+}
+
+.view-people-v1>image {
+    width: 100%;
+}
+
+.view-people-view {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* <!-- 核查通过信息 --> */
+.view-real {
+    margin-left: 96rpx;
+    margin-top: 96rpx;
+    width: 556rpx;
+    height: 712rpx;
+    background: #FFFFFF;
+    opacity: 1;
+    border-radius: 16rpx;
+}
+.view-real-image{
+    width: 528rpx;
+    height: 680rpx;
+    margin-left: 16rpx;
+    margin-top: 16rpx;
+}
+.view-show-success{
+    /* margin-left: 75rpx; */
+    margin-top: 32rpx;
+    text-align: center;
+}
+.image-success{
+    width: 32rpx;
+    height: 32rpx;
+}
+.view-text {
+    font-size: 36rpx;
+    font-family: PingFang SC;
+    font-weight: 400;
+    line-height: 50rpx;
+    color: #999999;
+    opacity: 1;
+}
+.body-top-view-tip {
     text-align: center;
 }

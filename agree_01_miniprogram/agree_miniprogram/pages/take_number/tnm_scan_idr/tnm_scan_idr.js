@@ -19,6 +19,9 @@ Page({
             // name: "许卓杰",
             // nationality: "汉",
         },
+        url:{
+            url_scan_image: getApp().globalData.img_service + "/miniprogramImg/img_kaika/0701.png",
+          },
     },
 
     /**

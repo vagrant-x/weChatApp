@@ -5,7 +5,14 @@ Page({
      * 页面的初始数据
      */
     data: {
-        isShowTakePhoto: true,
+        isShowTakePhoto: false,
+        url: {
+            url_camera: getApp().globalData.img_service + "/miniprogramImg/img_kaika/0902.png",//相机图示图片
+            url_people:  getApp().globalData.img_service + "/miniprogramImg/img_kaika/0901.png", //上半身图片
+            url_people_real:  getApp().globalData.img_service + "/miniprogramImg/img_kaika/1001.png", //上半身图片
+            url_success_image: getApp().globalData.img_service + "/miniprogramImg/img_kaika/0601.png",
+        },
+        isShowSuccess: true, // 是否显示设置密码成功提示信息
     },
 
     /**
