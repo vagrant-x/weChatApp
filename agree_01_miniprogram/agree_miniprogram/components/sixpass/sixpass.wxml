@@ -1,4 +1,4 @@
-<view class="payPass_box1" wx:if="{{allinputF1}}">
+<view  style="height: {{rpx_height}}rpx;width: {{rpx_width}}rpx;background-color: {{background_color}};" class="payPass_box1" wx:if="{{allinputF1}}">
 	<!-- <view class="qiueBtn" bindtap="hideBox">关闭</view>
 	<view class="payPass_box_t">请输入您的支付密码</view> -->
 	<view class="payPass_box_m">

@@ -11,6 +11,9 @@ Component({
    * 组件的初始数据
    */
   data: {
+    rpx_height: 100,
+    rpx_width: 600,
+    background_color: "#FFFFFF",
     allinputF1:true,
     inputArr:[],
     inputStr:'',
@@ -72,6 +75,20 @@ Component({
     focusInput(){
       console.log(this.data.inputStr)
       this.setData({allinputF1:true})
+    },
+    setWidthHeight(data){
+      console.log(data)
+      let width = data["width"]
+      let height = data["height"]
+      this.setData({
+        rpx_width: width,
+        rpx_height: height
+      })
+    },
+    setBackgroundColor(color){
+      this.setData({
+        background_color: color
+      })
     },
     setAllData(data){
         // console.log("将所有数据设置为：", data)
