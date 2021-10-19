@@ -80,7 +80,7 @@ Page({
     }
   },
   next_page: function(){
-    wx.redirectTo({
+    wx.navigateTo({
       url: '/pages/take_number/tnm_scan_idr/tnm_scan_idr',
     })
   },

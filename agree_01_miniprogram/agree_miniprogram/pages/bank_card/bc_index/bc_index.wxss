@@ -3,29 +3,69 @@
     display: flex;
 } */
 
-.view-idr{
+.view-idr {
     display: flex;
     flex-direction: row;
 }
-.view-idr-image{
-    width: 90%; 
-    height: 190px !important;
-    /* transform:rotate(-90deg); */
+.view-idr-view1{
+    margin-top: 114rpx;
+    margin-left: 98rpx;
+    /* 设置宽高将view 撑起来 */
+    width: 550rpx !important;
+    height: 352rpx !important;
+    border: 2rpx solid gray;
 }
-.view-idr-v1 > image{
+.view-idr-image {
+    width: 550rpx !important;
+    height: 352rpx !important;
+    position: absolute;
+    /* transform:rotate(-90deg); */
+    z-index: 1;
+}
+
+.view-idr-image-camera {
+    width: 104rpx;
+    height: 88rpx !important;
+    z-index: 2;
+    position: absolute;
+    margin-top: 92rpx;
+    margin-left: 222rpx;
+}
+
+.view-idr-text {
+    z-index: 3;
+    width: 288rpx;
+    height: 50rpx;
+    font-size: 36rpx;
+    font-family: PingFang SC;
+    font-weight: 600;
+    line-height: 52rpx;
+    color: #3FCBCA;
+    opacity: 1;
+    margin-left: 132rpx;
+    margin-top: 212rpx;
+    position: absolute;
+}
+
+.view-idr-v1>image {
     width: 100%;
 }
-.view-idr-view{
+
+.view-idr-view {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-view > image.image-delete{
-    width: 25px;
+view>image.image-delete {
+    /* width: 25px; */
     text-align: justify;
+    width: 45rpx;
+    height: 48rpx;
+    margin-left: 30rpx;
 }
 
-.bt-next{
-    background-color: rgb(163, 158, 236);
+.bt-next-click {
+    /* background-color: rgb(163, 158, 236); */
+    opacity: 1;
 }

@@ -1,4 +1,4 @@
-// pages/bank_card/bc_check_info/bc_check_info.js
+// pages/bank_card/bc_transaction_results/bc_transaction_results.js
 Page({
 
     /**
@@ -62,10 +62,5 @@ Page({
      */
     onShareAppMessage: function () {
 
-    },
-    next_page: function(){
-        wx.navigateTo({
-          url: '/pages/bank_card/bc_signature/bc_signature',
-        })
-    },
+    }
 })

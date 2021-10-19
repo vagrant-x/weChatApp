@@ -145,7 +145,7 @@ Page({
     },
     show_number_taking_page: function(){
         let page_url = "/pages/take_number/tnm_print/tnm_print"
-        wx.redirectTo({
+        wx.navigateTo({
           url: page_url,
           success(res){
             console.log(`跳转到 ${page_url} 成功`)

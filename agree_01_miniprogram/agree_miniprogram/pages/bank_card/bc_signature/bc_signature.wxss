@@ -1,1 +1,11 @@
 /* pages/bank_card/bc_signature/bc_signature.wxss */
+
+.body-top-view1{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(236, 201, 177);
+}
+.body-top-view-images1{
+    /* width: 70px !important; */
+    height: 70px !important;
+}

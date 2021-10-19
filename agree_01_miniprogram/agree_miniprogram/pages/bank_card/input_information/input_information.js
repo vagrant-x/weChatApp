@@ -72,7 +72,7 @@ Page({
       },
       next_page: function(){
         console.log("next_page")
-        wx.redirectTo({
+        wx.navigateTo({
           url: '/pages/bank_card/bc_select_card/bc_select_card',
         })
     },

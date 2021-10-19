@@ -1,2 +1,16 @@
 <!--pages/bank_card/bc_signature/bc_signature.wxml-->
-<text>pages/bank_card/bc_signature/bc_signature.wxml</text>
+<view class="body">
+    <view class="body-top">
+        <view class="body-top-view1">
+            <image  class="body-top-view-images1" src="../../../resource/img/bank_card/u162.png"></image>
+            <text>签名并点击确认表示您已阅读并资源遵守《银行客户须知》的有关规定，并保证上述提供的所有资料真实、合法、准确有效；同时对此次交易予以确认。</text>
+        </view>
+        <view>
+            <image src="../../../resource/img/bank_card/u164.png"></image>
+        </view>
+    </view>
+    <!-- 下一步按钮 -->
+    <view class="body-bottom">
+        <button bindtap="next_page" class="bt-next">确认，下一步</button>
+    </view>
+</view>

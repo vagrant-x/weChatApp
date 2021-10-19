@@ -5,11 +5,15 @@ Page({
      * 页面的初始数据
      */
     data: {
+        bt_class_next: "",
+        img_service: getApp().globalData.img_service,
         url: {
-            url_idCard_zm: "../../../resource/img/bank_card/u51.png", //身份证正面图示图片
-            url_idCard_fm: "../../../resource/img/bank_card/u52.png", //身份证反面图示图片
-            url_idCard_zm_tmp: "../../../resource/img/bank_card/u51.png", //身份证正面图示图片
-            url_idCard_fm_tmp: "../../../resource/img/bank_card/u52.png", //身份证反面图示图片
+            url_idCard_zm: getApp().globalData.img_service + "/miniprogramImg/img_kaika/0101.png",//身份证正面图示图片
+            url_idCard_fm: getApp().globalData.img_service + "/miniprogramImg/img_kaika/0102.png", //身份证反面图示图片
+            url_idCard_zm_tmp: getApp().globalData.img_service + "/miniprogramImg/img_kaika/0101.png", //身份证正面图示图片
+            url_idCard_fm_tmp: getApp().globalData.img_service + "/miniprogramImg/img_kaika/0102.png", //身份证反面图示图片
+            url_camera: getApp().globalData.img_service + "/miniprogramImg/img_kaika/0902.png",
+            url_delete: getApp().globalData.img_service + "/miniprogramImg/img_kaika/0203.png",
         },
         show_zm_delete_image: false,
         show_fm_delete_image: false,
@@ -85,44 +89,63 @@ Page({
                 const tempFilePaths = res.tempFilePaths
                 console.log("tempFilePaths: ", tempFilePaths)
                 // 根据点击的图片设置对应保存的url
-                if(type == "people"){
+                if (type == "people") {
                     this_page.data.url.url_idCard_zm_tmp = tempFilePaths[0]
                     this_page.setData({
                         url: this_page.data.url,
                         show_zm_delete_image: true
                     })
-                }else{
+                } else {
                     this_page.data.url.url_idCard_fm_tmp = tempFilePaths[0]
                     this_page.setData({
                         url: this_page.data.url,
                         show_fm_delete_image: true
                     })
                 }
+                // 拍摄两张图片，下一步按钮可用
+                if (this_page.data.show_zm_delete_image && this_page.data.show_fm_delete_image) {
+                    console.log("已经拍摄两张图片")
+                    this_page.data.bt_class_next = "bt-next-click"
+                    this_page.setData({
+                        bt_class_next: this_page.data.bt_class_next
+                    })
+                }
             }
         })
     },
-    //点击删除身份证反面
-    click_delete_image: function(event){
+    //点击删除身份证正反面
+    click_delete_image: function (event) {
         let this_page = this
         console.log("event:", event)
         let type = event.currentTarget.dataset.imgType
-        if(type == "people"){
+        if (type == "people") {
             this_page.data.url.url_idCard_zm_tmp = this_page.data.url.url_idCard_zm
             this_page.setData({
                 url: this_page.data.url,
                 show_zm_delete_image: false
             })
-        }else{
+        } else {
             this_page.data.url.url_idCard_fm_tmp = this_page.data.url.url_idCard_fm
             this_page.setData({
                 url: this_page.data.url,
                 show_fm_delete_image: false
             })
         }
-    },
-    next_page: function(){
-        wx.redirectTo({
-          url: '/pages/bank_card/input_information/input_information',
+        this.setData({
+            bt_class_next: ""
         })
+    },
+    next_page: function () {
+        if (this.data.show_fm_delete_image && this.data.show_zm_delete_image) {
+            wx.navigateTo({
+                url: '/pages/bank_card/input_information/input_information',
+            })
+        } else {
+            wx.showToast({
+                title: '请拍摄身份证图片',
+                icon: 'error',
+                duration: 2000
+            })
+        }
     },
 })

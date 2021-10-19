@@ -1,0 +1,154 @@
+<!--pages/home_page/home_page.wxml-->
+<view class="">
+    <!-- <uni-swiper-dot
+      :info="info"
+      :current="current"
+      field="content"
+      :dotsStyles="dotStyle"
+    >
+        </uni-swiper-dot> -->
+      <swiper class="swiper-box" bindchange="change" autoplay="true" indicator-dots="true">
+        <swiper-item wx:for="{{info}}" wx:key="index">
+          <view class="swiper-item">
+           <!-- :draggable="false"   mode="aspectFill"-->
+            <image
+              class="image"
+              src="{{item.url}}"
+              bindtap="onBanner(index)"
+              mode="aspectFill"
+            />
+            <button class="img-btn">前往查看</button>
+          </view>
+        </swiper-item>
+      </swiper>
+
+<view class="grid-wrapper ">
+    <view bindtap="view_open_transaction" wx:for="{{list}}" wx:key="index" data-id="{{item.id}}" class="grid-item">
+        <image class="grid-item-image" src="{{item.icon}}" alt="" ></image>
+        <text  class="grid-item-text">{{item.text }}</text>
+    </view>
+</view>
+    <!-- <uni-grid
+      :column="4"
+      :showBorder="false"
+      :square="false"
+      class="grid-wrapper"
+      @change='gridChange'
+    >
+      <uni-grid-item
+        v-for="(item, index) in list"
+        :key="index"
+        class="grid-item"
+      >
+        <img :src="item.icon" alt="" />
+        <text class="text">{{ item.text }}</text>
+      </uni-grid-item>
+    </uni-grid>-->
+
+    <view class="title"> 网点服务 </view> 
+    <view class="branches-services">
+        <image class="branches-services-image" src="https://www.aweb.org.cn/static/ui/poc/wangdianfuwubg.png" alt="">
+        </image>
+
+        <view class="branches-services-ctn">
+            <view class="branches-services-ctn-header">
+                <view class="">
+                    <text style='font-size:16px;font-weight:600;color:#272727'>广州星汇园支行</text>
+                </view>
+                <view class="branches-services-ctn-header-right">
+                    <text style='font-size:14px;color:#656565;margin-right:6px'>其他网点 ></text>
+                    <uni-icons type='arrowright' style='color:#666666'></uni-icons>
+                </view>
+            </view>
+            <view style='display:flex;align-items:center;margin-bottom:9px'>
+                <text style='font-size:14px;color:#1260FF;margin-right:20px'>距您2.31m</text><text
+                    style='font-size:14px;color:#333333'>广州市天河区金穗路28号102</text>
+            </view>
+            <view class="tag-and-btn-zone">
+                <view class="tag-zone">
+                    <text class='tag-zone-tag pink'>营业中</text>
+                    <text class='tag-zone-tag blue'>预约</text>
+                    <text class='tag-zone-tag blue'>智能</text>
+                </view>
+                <view class="btn-zone">
+                    <view class="btn">
+                        <image src="https://www.aweb.org.cn/static/ui/poc/daohang.png" alt="" class='btn-zone-btn-img1'>
+                        </image>
+                        <text class='operation'>导航</text>
+                    </view>
+                    <view class="divider"></view>
+                    <view class="btn">
+                        <image src="https://www.aweb.org.cn/static/ui/poc/zixun.png" alt="" class='divider-btn-img2'>
+                        </image>
+                        <text class='operation'>咨询</text>
+                    </view>
+                </view>
+
+            </view>
+            <button class='get-order-btn' bindtap="bt_take_number">取号</button>
+        </view>
+    </view>
+    <view class="title"> 企业贷 </view>
+    <image src="https://www.aweb.org.cn/static/ui/poc/qiyedai.png" alt="" class='loan-img'></image>
+    <view class="title"> 财富精选 </view>
+    <view class="invest-zone">
+        <view class="invest-zone-header">
+            <view class="invest-zone-header-item" wx:for='{{products}}' wx:key='index'>
+                <view class="" style='font-size:16px;font-weight:500;color:#374E71;margin-bottom:2px'>
+                    {{item.name}}
+                </view>
+                <view class="" style='color:#949699;font-size:12px;margin-bottom:9px'>
+                    {{item.desp}}
+                </view>
+                <view class="" style='color:#D92121;margin-bottom:5px'>
+                    <text style='font-size:24px'>{{item.rate}}</text><text style='font-size:14px'>%</text>
+                </view>
+                <view class="" style='color:#D92121;font-size:12px'>
+                    {{item.details}}
+                </view>
+            </view>
+        </view>
+        <view class="invest-zone-footer">
+            <view class="index-number-wrapper">
+                <view class="index-number-name">
+                    美元(USD)
+                </view>
+                <view class="index-number">
+                    627.62
+                </view>
+            </view>
+            <view class="index-number-wrapper">
+                <view class="index-number-name">
+                    黄金(AU)
+                </view>
+                <view class="index-number index-number-red">
+                    <text class=''>361.78</text>
+                    <uni-icons type='arrowthinup' color='#F65656'></uni-icons>
+                </view>
+            </view>
+            <view class="index-number-wrapper">
+                <view class="index-number-name">
+                    上证指数
+                </view>
+                <view class="index-number index-number-green">
+                    <text>3542.10</text>
+                    <!-- <uni-icons type='arrowthindown' color='#33A368'></uni-icons> -->
+                    <icons type='arrowthindown' color='#33A368'></icons>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="title"> 热门活动 </view>
+    <view class="hot-wrapper">
+        <view class="hot-wrapper-header">
+            <image class="hot-wrapper-header-img" src="https://www.aweb.org.cn/static/ui/poc/qiyejinli.png" alt="">
+            </image>
+            <image class="hot-wrapper-header-img hot-wrapper-header-img2 "
+                src="https://www.aweb.org.cn/static/ui/poc/shiyuefuli.png" alt=""></image>
+        </view>
+        <view class="hot-wrapper-footer">
+            <image class="hot-wrapper-footer-img" src="https://www.aweb.org.cn/static/ui/poc/jingxuanfuwu.png" alt="">
+            </image>
+        </view>
+    </view>
+</view>

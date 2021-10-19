@@ -4,24 +4,38 @@
     <view class="body-top">
         <!-- 身份证正面 -->
         <view class="view-idr">
-            <image bindtap="click_image" data-img-Type="people" class="view-idr-image" mode="widthFix" src="{{url.url_idCard_zm_tmp}}">
-            </image>
+            <view data-img-Type="people" bindtap="click_image" class="view-idr-view1">
+                <image  data-img-Type="people"  class="view-idr-image" mode="widthFix" src="{{url.url_idCard_zm_tmp}}">
+                </image>
+                <image  data-img-Type="people"   wx:if="{{!show_zm_delete_image}}"  class="view-idr-image-camera" mode="widthFix" src="{{url.url_camera}}">
+                </image>
+                <text  data-img-Type="people"   wx:if="{{!show_zm_delete_image}}"  class="view-idr-text">拍摄身份证人像面</text>
+            </view>
 
             <view wx:if="{{show_zm_delete_image}}" class="view-idr-view">
-                <image bindtap="click_delete_image"  data-img-Type="people"  class="image-delete" mode="widthFix" src="../../../resource/img/bank_card/u56.svg"></image>
+                <image bindtap="click_delete_image" data-img-Type="people" class="image-delete" mode="widthFix"
+                    src="{{url.url_delete}}"></image>
             </view>
         </view>
         <!-- 身份证反面 -->
         <view class="view-idr">
-            <image bindtap="click_image" data-img-Type="nationalEmblem"  class="view-idr-image"  mode="widthFix" src="{{url.url_idCard_fm_tmp}}"></image>
+            <view data-img-Type="nationalEmblem" bindtap="click_image" class="view-idr-view1">
+                <image class="view-idr-image" mode="widthFix" src="{{url.url_idCard_fm_tmp}}">
+                </image>
+                <image  wx:if="{{!show_fm_delete_image}}" class="view-idr-image-camera" mode="widthFix" src="{{url.url_camera}}">
+                </image>
+                <text wx:if="{{!show_fm_delete_image}}" class="view-idr-text">拍摄身份证国徽面</text>
+            </view>
+
             <view wx:if="{{show_fm_delete_image}}" class="view-idr-view">
-                <image  bindtap="click_delete_image"  data-img-Type="nationalEmblem"   class="image-delete" mode="widthFix" src="../../../resource/img/bank_card/u56.svg"></image>
+                <image bindtap="click_delete_image" data-img-Type="nationalEmblem" class="image-delete" mode="widthFix"
+                    src="{{url.url_delete}}"></image>
             </view>
         </view>
 
     </view>
     <!-- 下一步按钮  -->
     <view class="body-bottom">
-        <button class="bt-next" bindtap="next_page">下一步</button>
+        <button class="bt-next {{bt_class_next}}" bindtap="next_page">下一步</button>
     </view>
 </view>

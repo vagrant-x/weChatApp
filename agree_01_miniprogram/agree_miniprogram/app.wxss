@@ -23,9 +23,19 @@
 .body-bottom {
   height: 60px;
 }
-.bt-next{
-  background-color: rgb(163, 158, 236);
+
+.bt-next {
+  /* background-color: rgb(163, 158, 236); */
+  width: 70% !important;
+  /* width: 311px !important; */
+  height: 44px;
+  background: #407FFF;
+  opacity: 0.6;
+  border-radius: 22px;
+  color: #ffffff;
+  font-size: 36rpx;
 }
+
 /** 
 <view class="body">
     <view class="body-top">

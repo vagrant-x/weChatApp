@@ -72,7 +72,7 @@ Page({
 
     },
     next_page: function(){
-        wx.redirectTo({
+        wx.navigateTo({
           url: '/pages/bank_card/bc_set_password/bc_set_password',
         })
     }

@@ -62,5 +62,10 @@ Page({
      */
     onShareAppMessage: function () {
 
-    }
+    },
+    next_page: function(){
+        wx.navigateTo({
+          url: '/pages/bank_card/bc_transaction_results/bc_transaction_results',
+        })
+    },
 })

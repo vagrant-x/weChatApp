@@ -1,0 +1,31 @@
+/* pages/bank_card/bc_transaction_results/bc_transaction_results.wxss */
+.body-top-title{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.body-top-title-text{
+        /* background-color: grey; */
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        /* height: 100px; */
+}
+
+.body-top-detail{
+    width: 90%;
+    height: 350px;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: rgb(241, 234, 234);
+}
+.image-qrcode{
+    width: 280px;
+    height: 280px;
+}
+.image-detail-tip{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
