@@ -47,7 +47,7 @@
 
     <view class="title"> 网点服务 </view> 
     <view class="branches-services">
-        <image class="branches-services-image" src="https://www.aweb.org.cn/static/ui/poc/wangdianfuwubg.png" alt="">
+        <image class="branches-services-image" src="{{url.url_homepage}}/wangdianfuwubg.png" alt="">
         </image>
 
         <view class="branches-services-ctn">
@@ -72,13 +72,13 @@
                 </view>
                 <view class="btn-zone">
                     <view class="btn">
-                        <image src="https://www.aweb.org.cn/static/ui/poc/daohang.png" alt="" class='btn-zone-btn-img1'>
+                        <image src="{{url.url_homepage}}/daohang.png" alt="" class='btn-zone-btn-img1'>
                         </image>
                         <text class='operation'>导航</text>
                     </view>
                     <view class="divider"></view>
                     <view class="btn">
-                        <image src="https://www.aweb.org.cn/static/ui/poc/zixun.png" alt="" class='divider-btn-img2'>
+                        <image src="{{url.url_homepage}}/zixun.png" alt="" class='divider-btn-img2'>
                         </image>
                         <text class='operation'>咨询</text>
                     </view>
@@ -89,7 +89,7 @@
         </view>
     </view>
     <view class="title"> 企业贷 </view>
-    <image src="https://www.aweb.org.cn/static/ui/poc/qiyedai.png" alt="" class='loan-img'></image>
+    <image src="{{url.url_homepage}}/qiyedai.png" alt="" class='loan-img'></image>
     <view class="title"> 财富精选 </view>
     <view class="invest-zone">
         <view class="invest-zone-header">
