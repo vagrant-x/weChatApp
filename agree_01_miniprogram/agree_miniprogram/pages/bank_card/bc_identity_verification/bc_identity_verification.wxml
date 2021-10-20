@@ -2,13 +2,15 @@
 <view class="body">
     <view class="body-top">
         <view class="view-people" wx:if="{{isShowTakePhoto}}">
-            <view data-img-Type="nationalEmblem" bindtap="click_image" class="view-people-view1">
-                <image class="view-people-image" mode="widthFix" src="{{url.url_people}}">
+            <view data-img-Type="nationalEmblem" class="view-people-view1">
+                <image bindtap="click_image_take_photo" class="view-people-image" mode="widthFix"
+                    src="{{url.url_people}}">
                 </image>
-                <image wx:if="{{!show_fm_delete_image}}" class="view-people-image-camera" mode="widthFix"
-                    src="{{url.url_camera}}">
+                <image bindtap="click_image_take_photo" wx:if="{{!show_fm_delete_image}}"
+                    class="view-people-image-camera" mode="widthFix" src="{{url.url_camera}}">
                 </image>
-                <text wx:if="{{!show_fm_delete_image}}" class="view-people-text">拍摄客户本人半身照</text>
+                <text bindtap="click_image_take_photo" wx:if="{{!show_fm_delete_image}}"
+                    class="view-people-text">拍摄客户本人半身照</text>
             </view>
         </view>
         <!-- 拍摄客户本人半身照 -->
@@ -18,7 +20,9 @@
 
         <!-- 核查通过信息 -->
         <view class="view-real" wx:if="{{!isShowTakePhoto}}">
-            <image class="view-real-image" mode="widthFix" src="{{url.url_people_real}}"></image>
+            <view  class="view-real-in">
+                <image class="view-real-image" mode="widthFix" src="{{url.url_people_real}}"></image>
+            </view>
             <!-- <view class="body-top-view-tip">
                 <icon type="success" size="20px"></icon>
                 <text>核查通过</text>
@@ -31,6 +35,6 @@
     </view>
     <!-- 下一步按钮 -->
     <view class="body-bottom">
-        <button bindtap="next_page" class="bt-next">下一步</button>
+        <button bindtap="next_page" class="bt-next  {{bt_class_next}}">下一步</button>
     </view>
 </view>

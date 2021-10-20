@@ -74,6 +74,12 @@ page {
     opacity: 1;
     border-radius: 16rpx;
 }
+.view-real-in{
+    width: 528rpx;
+    height: 680rpx;
+    /* margin-left: 16rpx;
+    margin-top: 16rpx; */
+}
 .view-real-image{
     width: 528rpx;
     height: 680rpx;
