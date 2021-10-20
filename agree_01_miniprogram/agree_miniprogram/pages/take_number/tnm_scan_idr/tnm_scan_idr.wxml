@@ -2,58 +2,78 @@
 
 <!-- 提示用刷身份证 -->
 <view class="view-scan" wx:if="{{readingIdCadr}}">
-    <image class="view-scan-image1"  mode="widthFix"  src="{{url.url_scan_image}}"></image>
+    <image class="view-scan-image1" mode="widthFix" src="{{url.url_scan_image}}"></image>
     <view class="text-tips">请将身份证放置于读卡器上方</view>
 </view>
 <!-- 显示用户身份证信息 -->
 <view wx:else>
-    <view>
+    <view class="view-info">
+        <!-- 头像 -->
+        <view>
+            <image class="image-people" src="{{url.url_people_image}}"></image>
+        </view>
+        <!-- 个人信息 -->
         <view>
             <view class="view-row">
-                <text decode="true" class="text-left">姓名&nbsp;</text>
-                <text>{{userInfo.name}}</text>
+                <!-- <view class="view-row-view1"> </view>-->
+                <view class="view-row-view1">
+                    <text decode="true" class="text-left">姓名&nbsp;</text>
+                </view>
+                <text class="text-right">{{userInfo.name}}</text>
             </view>
             <view class="view-row">
-                <text decode="true" class="text-left">性别&nbsp;</text>
-                <text>{{userInfo.gender}}</text>
+                <view class="view-row-view1">
+                    <text decode="true" class="text-left">性别&nbsp;</text>
+                </view>
+                <text class="text-right">{{userInfo.gender}}</text>
             </view>
             <view class="view-row">
-                <text decode="true" class="text-left">民族&nbsp;</text>
-                <text>{{userInfo.nationality}}</text>
+                <view class="view-row-view1">
+                    <text decode="true" class="text-left">民族&nbsp;</text>
+                </view>
+                <text class="text-right">{{userInfo.nationality}}</text>
             </view>
             <view class="view-row">
-                <text decode="true" class="text-left">出生&nbsp;</text>
-                <text>{{userInfo.birthday}}</text>
+                <view class="view-row-view1">
+                    <text decode="true" class="text-left">出生&nbsp;</text>
+                </view>
+                <text class="text-right">{{userInfo.birthday}}</text>
             </view>
-        </view>
-        <!-- <view>
-            <image></image>
-        </view> -->
-        <view class="view-row">
-            <text decode="true" class="text-left">住址&nbsp;</text>
-            <text>{{userInfo.address}}</text>
-        </view>
-        <view class="view-row">
-            <text decode="true" class="text-left">公民身份号码&nbsp;</text>
-            <text>{{userInfo.id}}</text>
+            <view class="view-row">
+                <view class="view-row-view1">
+                    <text decode="true" class="text-left">住址&nbsp;</text>
+                </view>
+                <view class="address">
+                    <text class="text-right">{{userInfo.address}}</text>
+                </view>
+            </view>
+            <view class="view-row">
+                <view class="view-row-view1">
+                    <text decode="true" class="text-left">公民身份号码&nbsp;</text>
+                </view>
+                <text class="text-right">{{userInfo.id}}</text>
+            </view>
+            <view class="view-row">
+                <view class="view-row-view1">
+                    <text decode="true" class="text-left">签发机关&nbsp;</text>
+                </view>
+                <text class="text-right">{{userInfo.department}}</text>
+            </view>
+            <view class="view-row">
+                <view class="view-row-view1">
+                    <text decode="true" class="text-left">有效期限&nbsp;</text>
+                </view>
+                <text class="text-right">{{userInfo.from}}-{{userInfo.end}}</text>
+            </view>
         </view>
     </view>
-    <view>
-        <view class="view-row">
-            <text decode="true" class="text-left">签发机关&nbsp;</text>
-            <text>{{userInfo.department}}</text>
-        </view>
-        <view class="view-row">
-            <text decode="true" class="text-left">有效期限&nbsp;</text>
-            <text>{{userInfo.from}}-{{userInfo.end}}</text>
-        </view>
-    </view>
+    <!-- 按钮 -->
     <view class="view-for-button">
-        <view class="view-for-button-item">
-            <button bindtap="re_call_idr">重新读取</button>
+        <view class="view-for-button-item1">
+            <button  class="view-for-button1" bindtap="re_call_idr">重新读取</button>
         </view>
-        <view  class="view-for-button-item">
-            <button bindtap="show_number_taking_page">信息正确，取号</button>
+        <view class="view-for-button-item2">
+            <button class="view-for-button2" bindtap="show_number_taking_page">信息正确，下一步</button>
         </view>
     </view>
 </view>

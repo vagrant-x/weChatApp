@@ -20,6 +20,7 @@ page {
     margin-left: 96rpx;
     margin-top: 62rpx;
 }
+
 .text-tips {
     text-align: center;
     margin-top: 26rpx;
@@ -34,27 +35,108 @@ page {
 
 
 
-.text-left {
-    color: green;
-}
+
 
 .view-row {
     flex-direction: row;
 }
 
+.address {
+    display: inline-block;
+    width: 400rpx;
+}
+
+.view-row-view1 {
+    display: inline-block;
+    width: 256rpx;
+    padding-left: 32rpx;
+    margin-top: 32rpx;
+}
+
+.text-left {
+    width: 256rpx;
+    height: 44rpx;
+    font-size: 32rpx;
+    font-family: PingFang SC;
+    font-weight: 400;
+    line-height: 38rpx;
+    color: #939599;
+    opacity: 1;
+}
+
+.text-right {
+    height: 44rpx;
+    font-size: 32rpx;
+    font-family: PingFang SC;
+    font-weight: 400;
+    line-height: 38rpx;
+    color: #313233;
+    opacity: 1;
+}
+
+
+
 .view-for-button {
     display: flex;
     width: 100%;
+    margin-top: 116rpx;
 }
 
-.view-for-button-item {
-    width: 50%;
+.view-for-button-item1 {
+    margin-left: 64rpx;
+}
+
+.view-for-button1 {
+    width: 208rpx !important;
+    height: 80rpx !important;
+    border: 2rpx solid #3464FF;
+    opacity: 1;
+    border-radius: 40rpx !important;
+    font-size: 36rpx;
+    font-family: PingFang SC;
+    font-weight: 400;
+    line-height: 50rpx;
+    color: #3464FF;
+    opacity: 1;
+}
+
+.view-for-button-item1 {
+    margin-left: 44rpx;
+}
+.view-for-button-item2 {
+    margin-left: 44rpx;
+}
+.view-for-button2 {
+    background: #407FFF;
+    width: 412rpx !important;
+    height: 80rpx !important;
+    border: 2rpx solid #3464FF;
+    opacity: 1;
+    border-radius: 40rpx !important;
+    font-size: 36rpx;
+    font-family: PingFang SC;
+    font-weight: 400;
+    line-height: 50rpx;
+    color:  #FFFFFF;
+    opacity: 1;
 }
 
 view>button {
-    background-color: rgb(146, 175, 230);
+    /* background-color: rgb(146, 175, 230);
     width: 80% !important;
     font-size: 14px;
     margin: 0px !important;
-    padding: 0px !important;
+    padding: 0px !important; */
+}
+
+.view-info {
+    background: #FFFFFF;
+    opacity: 1;
+}
+
+.image-people {
+    margin-left: 276rpx;
+    margin-top: 32rpx;
+    width: 200rpx;
+    height: 220rpx;
 }

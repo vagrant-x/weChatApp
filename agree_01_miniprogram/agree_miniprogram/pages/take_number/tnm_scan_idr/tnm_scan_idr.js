@@ -22,6 +22,7 @@ Page({
         },
         url: {
             url_scan_image: getApp().globalData.img_service + "/miniprogramImg/img_kaika/0701.png",
+            url_people_image: getApp().globalData.img_service + "/miniprogramImg/img_kaika/0801.png",
         },
     },
 
