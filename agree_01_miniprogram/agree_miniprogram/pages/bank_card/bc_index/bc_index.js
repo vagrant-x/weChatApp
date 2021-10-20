@@ -142,7 +142,7 @@ Page({
             })
         } else {
             wx.showToast({
-                title: '请拍摄身份证图片',
+                title: '请拍摄身份证',
                 icon: 'error',
                 duration: 2000
             })

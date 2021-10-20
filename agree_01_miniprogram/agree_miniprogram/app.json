@@ -1,12 +1,12 @@
 {
   "pages":[
+    "pages/bank_card/bc_set_password/bc_set_password",
+    "pages/home_page/home_page",
+    "pages/bank_card/bc_index/bc_index",
     "pages/bank_card/bc_identity_verification/bc_identity_verification",
     "pages/take_number/tnm_scan_idr/tnm_scan_idr",
-    "pages/bank_card/bc_set_password/bc_set_password",
     "pages/bank_card/bc_select_card/bc_select_card",
     "pages/bank_card/input_information/input_information",
-    "pages/bank_card/bc_index/bc_index",
-    "pages/home_page/home_page",
     "pages/bank_card/bc_transaction_results/bc_transaction_results",
     "pages/bank_card/bc_signature/bc_signature",
     "pages/bank_card/bc_check_info/bc_check_info",

@@ -143,21 +143,35 @@ Page({
     this.current = e.detail.current;
   },
 
-  // 请求token
+  // 请求token : 并保存到 globalData中
   getToken: function () {
+    let app = getApp()
     let this_page = this
     wx.request({
-      url: 'https://www.xiongweixp.tech/adaas/token?username=admin&password=admin&grant_type=password&scope=device&client_id=client_password&client_secret=123456', //仅为示例，并非真实的接口地址
+      url: app.globalData.url.url_token, //仅为示例，并非真实的接口地址
       method: "POST",
       header: {
         'content-type': 'application/json' // 默认值
       },
       success(res) {
         console.log(res)
-        let app = getApp()
         app.globalData.token = res.data.access_token
         this_page.data.token = res.data.access_token
-        console.log("取号 token : ", app.globalData.token)
+        console.log("获取token成功 : ", app.globalData.token)
+      },
+      fail: function(res){
+        console.log("获取token失败：", res)
+        wx.showModal({
+          title: "获取token失败",
+          content: res.errMsg,
+          success(res){
+            if(res.confirm){
+              console.log("用户点击确定")
+            }else{
+              console.log("用户点击取消")
+            }
+          }
+        })
       }
     })
   },
@@ -166,7 +180,7 @@ Page({
   * 生命周期函数--监听页面加载
   */
   onLoad: function (options) {
-
+    this.getToken() // 获取token 
   },
 
   /**

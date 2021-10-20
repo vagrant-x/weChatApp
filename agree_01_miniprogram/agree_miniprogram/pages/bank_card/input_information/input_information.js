@@ -112,7 +112,7 @@ Page({
       })
     } else {
       wx.showToast({
-        title: '信息录入不完整！',
+        title: '信息不完整',
         icon: 'error',
         duration: 2000
       })
