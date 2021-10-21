@@ -10,3 +10,6 @@
 <button type="primary" class="button1" bindtap="callFunc" data-callUrl="/pages/test/test">测试组件</button>
 <button type="primary" class="button1" bindtap="callFunc" data-callUrl="/pages/test2/test2">测试组件2</button>
 <button type="primary" class="button1" bindtap="callFunc" data-callUrl="/pages/item1/template/template">组件：template</button>
+
+<button type="primary" class="button1" bindtap="callFunc" data-callUrl="/pages/signature/signature">屏幕签名</button>
+<button type="primary" class="button1" bindtap="callFunc" data-callUrl="/pages/qrcode/qrcode">生成二维码</button>

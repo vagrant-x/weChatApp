@@ -1,5 +1,9 @@
 <!--pages/item1/home/home.wxml-->
 <view class="headerView">
+    <view class="addressView">
+        <image class="addressImage" src="../../../img/address.jpg"></image>
+        <text class="addressTX">上海</text>
+    </view>
     <input bindconfirm="searchOrder" class="textArea" type="text" placeholder="请输入商品搜索" placeholder-class="placeholderClass" />
     <view class="recommenView">
         <navigator url="homeContent/homeContent" class="navigatorClass" wx:for="{{productArr}}" wx:key="*this">{{item}}</navigator>

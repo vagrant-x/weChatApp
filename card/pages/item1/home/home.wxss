@@ -5,6 +5,22 @@
     background-color: #1AABAB;
     text-align: center;
 }
+.addressView{
+    height: 50rpx;
+}
+.addressImage{
+    width: 45rpx;
+    height: 45rpx;
+    float: left;
+    margin-left: 20rpx;
+}
+.addressTX{
+    line-height: 40rpx;
+    margin-left: 20rpx;
+    font-size: 34rpx;
+    color: #ffffff;
+    float: left;
+}
 .textArea{
     display: inline-block;
     background-color: #ffffff;

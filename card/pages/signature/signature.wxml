@@ -1,0 +1,10 @@
+<!--pages/signature/signature.wxml-->
+<canvas canvas-id="firstCanvas" id='firstCanvas' bindtouchstart="bindtouchstart"
+      bindtouchmove="bindtouchmove"></canvas>
+<view class="btn mgt-15">
+        <button bindtap="clear">清除</button>
+        <button bindtap="export">确认提交</button>
+</view>
+
+<image src="{{img_url}}"></image>
+
