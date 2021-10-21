@@ -89,26 +89,28 @@ page {
 .view-for-button1 {
     width: 208rpx !important;
     height: 80rpx !important;
+    padding: 0rpx;
     border: 2rpx solid #3464FF;
     opacity: 1;
     border-radius: 40rpx !important;
-    font-size: 36rpx;
+    font-size: 36rpx; 
     font-family: PingFang SC;
     font-weight: 400;
-    line-height: 50rpx;
+    line-height: 70rpx;
     color: #3464FF;
     opacity: 1;
 }
 
 .view-for-button-item1 {
-    margin-left: 44rpx;
+    margin-left: 62rpx;
 }
 .view-for-button-item2 {
-    margin-left: 44rpx;
+    margin-left: 62rpx;
 }
 .view-for-button2 {
+    padding: 0rpx;
     background: #407FFF;
-    width: 412rpx !important;
+    width: 352rpx !important;
     height: 80rpx !important;
     border: 2rpx solid #3464FF;
     opacity: 1;
@@ -116,7 +118,7 @@ page {
     font-size: 36rpx;
     font-family: PingFang SC;
     font-weight: 400;
-    line-height: 50rpx;
+    line-height: 70rpx;
     color:  #FFFFFF;
     opacity: 1;
 }

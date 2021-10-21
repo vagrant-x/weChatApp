@@ -1,22 +1,25 @@
 <!--pages/bank_card/bc_transaction_results/bc_transaction_results.wxml-->
 <view class="body">
     <view class="body-top">
-        <view class="body-top-title">
-            <icon type="success" size="60px"></icon>
-            <view class="body-top-title-text">
-                <text>交易成功</text>
+        <view class="body-top-in">
+            <view class="body-top-title">
+                <!-- <icon type="success" size="60px"></icon> -->
+                <image class="body-top-view-images1" src="{{url.url_kaika}}/1301.png"></image>
+                <view class="body-top-title-text">
+                    <text>交易成功</text>
+                </view>
             </view>
-        </view>
-        <view class="body-top-detail">
-            <image  class="image-qrcode" src="../../../resource/img/bank_card/u170.png"></image>
-            <view>
-                <image src="../../../resource/img/bank_card/u162.png" class="image-detail-tip"></image>
-                <text>请移步【交割区】出示二维码领取卡片</text>
+            <view class="body-top-detail">
+                <image class="image-qrcode" src="{{url.url_kaika}}/1303.png"></image>
+                <view class="body-top-detail-tip">
+                    <image src="{{url.url_kaika}}/1302.png" class="image-detail-tip"></image>
+                    <text class="body-top-detail-text">请移步【交割区】出示二维码领取卡片</text>
+                </view>
             </view>
         </view>
     </view>
     <!-- 下一步按钮 -->
     <view class="body-bottom">
-        <button class="bt-next">打印</button>
+        <button class="bt-next bt-next-click" bindtap="printInfo">打印</button>
     </view>
 </view>

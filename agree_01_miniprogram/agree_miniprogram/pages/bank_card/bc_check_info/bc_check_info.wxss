@@ -1,26 +1,84 @@
 /* pages/bank_card/bc_check_info/bc_check_info.wxss */
-.body-top-view{
-    margin-top: 15px;
+page {
+    background: #F2F3F5;
 }
-.body-top-view-addr{
+
+.body-top-view {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 32rpx;
+    background: #FFFFFF;
+    border: 1rpx solid #F0F2F5;
+    opacity: 1;
+}
+
+.body-top-view-addr {
     display: flex;
     flex-direction: row;
 }
-.view_first_text{
+
+.view_first_text {
+    width: 160rpx;
     display: inline-block;
-    width: 80px;
-    text-align: end;
-    margin-right: 10px;
-}
-.view_second_text{
+    text-align: start;
+    font-size: 32rpx;
+    font-family: PingFang SC;
+    font-weight: 400;
+    line-height: 38rpx;
+    color: #939599;
+    opacity: 1;
 }
 
-.body-bottom > button{
+.view_second_text {
+    height: 44rpx;
+    font-size: 32rpx;
+    font-family: PingFang SC;
+    font-weight: 400;
+    line-height: 38rpx;
+    color: #313233;
+    opacity: 1;
+}
+
+.body-bottom>button {
     width: 80% !important;
 }
 
-.body-bottom-view1{
+.body-bottom-view1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    font-size: 14px;
+    margin-top: 32rpx;
 }
 
+.body-bottom-view1 > text {
+    margin-left: 4rpx;
+    font-size: 28rpx;
+    font-family: PingFang SC;
+    font-weight: 400;
+    line-height: 40rpx;
+    color: #626366;
+    opacity: 1;
+}
+
+.body-bottom {
+    height: 100px;
+}
+
+.body-bottom-view1-images1 {
+    width: 32rpx;
+    height: 32rpx;
+    margin-top: 4rpx !important;
+}
+
+.bt-next {
+    width: 622px !important;
+    height: 80rpx !important;
+    line-height: 80rpx !important;
+    padding: 0 !important;
+    color: #ffffff;
+    font-size: 36rpx;
+    background: #407FFF;
+    opacity: 1;
+    border-radius: 38rpx;
+}

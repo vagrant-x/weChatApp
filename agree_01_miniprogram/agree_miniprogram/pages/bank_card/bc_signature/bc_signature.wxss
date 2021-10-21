@@ -1,11 +1,49 @@
 /* pages/bank_card/bc_signature/bc_signature.wxss */
-
-.body-top-view1{
-    display: flex;
-    flex-direction: row;
-    background-color: rgb(236, 201, 177);
+page {
+    background: #F2F3F5;
 }
-.body-top-view-images1{
-    /* width: 70px !important; */
-    height: 70px !important;
+
+.body-top {
+
+}
+.body-top-in{
+    padding-top: 32rpx;
+    width: 100%;
+    height: 800rpx;
+    background: #FFFFFF;
+    opacity: 1;
+}
+.body-top-view1 {
+    width: 686rpx;
+    height: 224rpx;
+    margin-left: 32rpx;
+    border-radius: 12rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background: #FFF2DC;
+    opacity: 1;
+}
+.body-top-view1 > text{
+    width: 518rpx;
+    height: 160rpx;
+    margin-left: 32rpx;
+    font-size: 28rpx;
+    font-family: PingFang SC;
+    font-weight: 600;
+    line-height: 40rpx;
+    color: #333333;
+    opacity: 1;
+}
+
+.body-top-view-images1 {
+    width: 66rpx;
+    height: 72rpx;
+}
+.body-top-view1-image2{
+    width: 510rpx;
+    height: 255rpx;
+    margin-top: 150rpx;
+    margin-left: 118rpx;
 }

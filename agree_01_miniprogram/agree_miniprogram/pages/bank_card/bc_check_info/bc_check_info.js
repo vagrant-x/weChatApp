@@ -1,18 +1,24 @@
 // pages/bank_card/bc_check_info/bc_check_info.js
+const app = getApp()
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+      userInfo: {}, // 用户信息
+      url: {
+        url_kaika: getApp().globalData.img_service + "/miniprogramImg/img_kaika/1101.png",//身份证正面图示
+      },
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+      this.setData({
+        userInfo: app.globalData.userInfo
+      })
     },
 
     /**
