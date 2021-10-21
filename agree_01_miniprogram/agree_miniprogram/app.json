@@ -1,7 +1,7 @@
 {
   "pages":[
-    "pages/bank_card/bc_transaction_results/bc_transaction_results",
     "pages/home_page/home_page",
+    "pages/bank_card/bc_transaction_results/bc_transaction_results",
     "pages/bank_card/bc_signature/bc_signature",
     "pages/bank_card/bc_check_info/bc_check_info",
     "pages/bank_card/bc_index/bc_index",

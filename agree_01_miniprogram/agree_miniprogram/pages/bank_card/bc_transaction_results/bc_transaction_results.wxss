@@ -38,7 +38,10 @@ page{
     margin-right: 5%;
     background-color: rgb(241, 234, 234); */
 }
-
+.body-top-detail-view{
+    display: flex;
+    justify-content: center;
+}
 .image-qrcode {
     width: 336rpx;
     height: 336rpx;

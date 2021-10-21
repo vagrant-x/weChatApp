@@ -1,6 +1,7 @@
 // pages/bank_card/bc_transaction_results/bc_transaction_results.js
 const app = getApp()
 var util = require("../../../utils/util.js")
+const drawQrcode = require('../../../utils/weapp.qrcode.js')
 Page({
 
     /**
@@ -71,7 +72,28 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        // 调用weapp.qrcode.js 生成二维码
+        let bee_img = "../../../resource/img/0001.png"
+        drawQrcode({
+            width: 160,
+            height: 160,
+            // x: 20,
+            // y: 20,
+            canvasId: 'myQrcode',
+            // ctx: wx.createCanvasContext('myQrcode'),
+            typeNumber: 10,
+            text: app.globalData.controllerId,
+            image: {
+                imageResource: bee_img,
+                dx: 60,
+                dy: 60,
+                dWidth: 40,
+                dHeight: 40
+            },
+            callback(e) {
+                console.log('e: ', e)
+            }
+        })
     },
 
     /**

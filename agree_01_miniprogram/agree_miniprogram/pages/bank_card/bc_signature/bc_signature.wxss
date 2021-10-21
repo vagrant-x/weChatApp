@@ -3,16 +3,62 @@ page {
     background: #F2F3F5;
 }
 
-.body-top {
+.signature {
+    margin-top: 100rpx;
+    margin-left: 1%;
+    width: 98%;
+    text-align: center;
+    border: 1rpx solid gray;
 
 }
-.body-top-in{
+
+.signature-canvas {
+    width: 100% !important;
+    height: 375rpx !important;
+}
+
+.signature-view {
+    text-align: center;
+}
+
+.signature-view-tip {
+    text-align: center;
+}
+
+.signature-tip {
+    font-size: 36rpx;
+    font-family: PingFang SC;
+    font-weight: 400;
+    line-height: 50px;
+    color: #999999;
+    opacity: 1;
+}
+
+.canvas-bt {
+    margin-left: 30rpx !important;
+    margin-right: 30rpx !important;
+    width: 200rpx !important;
+    height: 88rpx !important;
+    display: inline-block;
+    line-height: 70rpx;
+    opacity: 1;
+    border-radius: 44rpx;
+    color: #ffffff;
+    font-size: 36rpx;
+    padding: 0rpx;
+    background: #407FFF;
+}
+
+.body-top {}
+
+.body-top-in {
     padding-top: 32rpx;
     width: 100%;
     height: 800rpx;
     background: #FFFFFF;
     opacity: 1;
 }
+
 .body-top-view1 {
     width: 686rpx;
     height: 224rpx;
@@ -25,7 +71,8 @@ page {
     background: #FFF2DC;
     opacity: 1;
 }
-.body-top-view1 > text{
+
+.body-top-view1>text {
     width: 518rpx;
     height: 160rpx;
     margin-left: 32rpx;
@@ -41,7 +88,8 @@ page {
     width: 66rpx;
     height: 72rpx;
 }
-.body-top-view1-image2{
+
+.body-top-view1-image2 {
     width: 510rpx;
     height: 255rpx;
     margin-top: 150rpx;

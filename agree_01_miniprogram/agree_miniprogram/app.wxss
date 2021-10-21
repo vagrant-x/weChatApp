@@ -21,17 +21,17 @@
 }
 
 .body-bottom {
-  height: 60px;
+  height: 120rpx;
 }
 
 .bt-next {
   /* background-color: rgb(163, 158, 236); */
   width: 70% !important;
   /* width: 311px !important; */
-  height: 44px;
+  height: 88rpx;
   background: #407FFF;
   opacity: 0.6;
-  border-radius: 22px;
+  border-radius: 44rpx;
   color: #ffffff;
   font-size: 36rpx;
 }

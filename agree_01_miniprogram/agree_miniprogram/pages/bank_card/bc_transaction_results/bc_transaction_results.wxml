@@ -10,7 +10,11 @@
                 </view>
             </view>
             <view class="body-top-detail">
-                <image class="image-qrcode" src="{{url.url_kaika}}/1303.png"></image>
+                <!-- <image class="image-qrcode" src="{{url.url_kaika}}/1303.png"></image> -->
+                <view class="body-top-detail-view">
+                    <canvas style="width: 160px; height: 160px;" canvasId="myQrcode" id="myQrcode"></canvas>
+                </view>
+
                 <view class="body-top-detail-tip">
                     <image src="{{url.url_kaika}}/1302.png" class="image-detail-tip"></image>
                     <text class="body-top-detail-text">请移步【交割区】出示二维码领取卡片</text>
