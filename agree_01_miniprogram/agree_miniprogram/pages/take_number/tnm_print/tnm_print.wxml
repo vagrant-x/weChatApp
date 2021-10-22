@@ -1,44 +1,51 @@
 <!--pages/take_number/tnm_print/tnm_print.wxml-->
+<view class="body">
+    <view class="body-top">
+        <view class="top-class">
+            <view class="view-head">
+                <text>您已成功取号</text>
+            </view>
+            <view class="view-body">
+                <view class="view-body-head">
+                    <view>
+                        <text class="v-number">V0001</text>
+                    </view>
+                    <view>
+                        <text class="v-number-text">排队号</text>
+                    </view>
+                </view>
+                <view class="view-body-body">
+                    <view>
+                        <text>业务ID</text>
+                        <text class="view-body-body-text2">BS1132</text>
+                    </view>
+                    <view>
+                        <text>业务名称</text>
+                        <text class="view-body-body-text2">转账汇款</text>
+                    </view>
+                    <view>
+                        <text>可办理窗口</text>
+                        <text class="view-body-body-text2">1，2，3，4</text>
+                    </view>
+                    <view>
+                        <text>等待人数</text>
+                        <text class="view-body-body-text2">1</text>
+                    </view>
+                    <view>
+                        <text>网点总等待人数</text>
+                        <text class="view-body-body-text2">1</text>
+                    </view>
+                    <view>
+                        <text>队列号校验码</text>
+                        <text class="view-body-body-text2">666</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <!-- 下一步按钮 -->
+    <view class="body-bottom">
+        <button bindtap="call_escposprinter1" class="bt-next bt-next-click">打印</button>
+    </view>
+</view>
 
-<view class="view-head">
-    <text>您已经成功取号</text>
-</view>
-<view class="view-body">
-    <view class="view-body-head">
-        <view>
-            <text class="v-number">V0001</text>
-        </view>
-        <view>
-            <text>排队号</text>
-        </view>
-    </view>
-    <view class="view-body-body">
-        <view>
-            <text>业务ID</text>
-            <text class="view-body-body-text2">BS1132</text>
-        </view>
-        <view>
-            <text>业务名称</text>
-            <text class="view-body-body-text2">转账汇款</text>
-        </view>
-        <view>
-            <text>可办理窗口</text>
-            <text class="view-body-body-text2">1，2，3，4</text>
-        </view>
-        <view>
-            <text>等待人数</text>
-            <text class="view-body-body-text2">0</text>
-        </view>
-        <view>
-            <text>网点总等待人数</text>
-            <text class="view-body-body-text2">0</text>
-        </view>
-        <view>
-            <text>队列号校验码</text>
-            <text class="view-body-body-text2">666</text>
-        </view>
-    </view>
-</view>
-<view class="view-bottom">
-    <button bindtap="call_escposprinter1">打印</button>
-</view>

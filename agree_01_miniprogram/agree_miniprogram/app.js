@@ -15,7 +15,7 @@ App({
 
   globalData: {
     token: "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiYWRhYXMiXSwic2NvcGUiOlsiZGV2aWNlIl0sImV4cCI6MTYzNDkyNzU4NywiYXV0aG9yaXRpZXMiOlsic3VwZXJfbWFuYWdlciJdLCJqdGkiOiI5YzM4MjQzNC02MmUyLTQ3ODAtYWQxZi04YzMxNzhlM2JmN2YiLCJjbGllbnRfaWQiOiJjbGllbnRfY3JlZGVudGlhbHMifQ.mFC3WosxWuTuomOoFdwq8Y0Hf2HjQ3F2G6ubYime_Vv728K3RsH8Xad-No0_-xviZKICxSPtWl7P7MjAnlkK4jf4cKdqdOumIqYt6qigqQ-WjFXoW5ErerWobgm-ZoGj0g1uhF9FJ7LXlSGbTdJO53dZ58gUuDmkWu9W891h1mAD9FGAvBmENqp6iGWS6dXYPyWiRLdatQcxZAaEHKmkQlQ8S3_ViVL5krc46UA4TAqeXUQzyRzZUvPJk2Vznn_yBpTNvjv3iDqUsDoZiNmLIZk3v5ZdTRnyDgLDAB5LVcJiiRPDt0byCAuo0rivPhoAbCMHjAotb8Ds31T9rdL9HQ",  // 请求的token，在 home_page中获取
-    controllerId: "", // 调用外设网关id， 如： 0000202B09D7
+    controllerId: "0000202B09D7", // 调用外设网关id， 如： 0000202B09D7
     // 保存开卡等交易用户信息
     userInfo: {
       // address: "广州市天河区华穗路398号冼村街公共集体户",

@@ -52,7 +52,18 @@ Page({
             if (res.statusCode == 200 && res.data.status == 0) {
                 wx.showModal({
                     title: "打印成功",
-                    content: ""
+                    content: "返回首页",
+                    success(res){
+                        if(res.confirm){
+                            let pages = getCurrentPages().length - 1;
+                            wx.navigateBack({ // 返回首页
+                                delta: pages
+                              })
+                            // wx.redirectTo({
+                            //   url: '/pages/home_page/home_page',
+                            // })
+                        }
+                    }
                 })
             } else {
                 wx.showModal({
