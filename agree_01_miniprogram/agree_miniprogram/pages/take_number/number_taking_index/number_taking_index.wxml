@@ -1,2 +1,30 @@
-<button class="bt" bindtap="bt_scan" >扫一扫</button>
-<button class="bt" bindtap="bt_touch">靠一靠</button>
+<!-- <button class="bt" bindtap="bt_scan">扫一扫</button>
+<button class="bt" bindtap="bt_touch">靠一靠</button> -->
+
+<view class="view-body">
+    <view class="view-body-in">
+        <view bindtap="bt_scan" class="view-comman view-scan">
+            <image  class="view-image" src="{{url.url_img_quhao}}/0101.png"></image>
+            <text class="view-text">扫码取号</text>
+        </view>
+    </view>
+    <view class="view-body-in">
+        <view bindtap="bt_touch" class="view-comman view-nfc">
+            <image  class="view-image" src="{{url.url_img_quhao}}/0102.png"></image>
+            <text  class="view-text">NFC取号</text>
+        </view>
+    </view>
+</view>
+
+<!-- NFC 模态弹窗 -->
+<view class="nfc-body" wx:if="{{isShowModal}}">
+    <view class="nfc-body-view">
+        <view class="nfc-body-view-view">
+            <image src="{{url.url_img_quhao}}/0201.png" class="nfc-body-view-view-image"></image>
+        </view>
+        <view class="nfc-body-view2">
+            <text class="nfc-body-view-text">请把手机靠近网关</text>
+        </view>
+    </view>
+
+</view>

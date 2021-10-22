@@ -39,8 +39,55 @@ const formatCurrentDateTime = () => {
   let myDate = new Date().format("yyyy-MM-dd hh:mm:ss")
   return myDate
 }
+//=================================================
+/**
+ * 格式化得到aid值
+ * @param {Object} buffer
+ */
+const ab2hex = function (buffer) {
+  var hexArr = Array.prototype.map.call(
+    new Uint8Array(buffer),
+
+    function (bit) {
+      return ('00' + bit.toString(16)).slice(-2);
+    }
+  );
+  return hexArr.join('');
+}
+
+//=================================================
+
+ /**
+  * 字节对象转字符串
+  * @param {Object} arr
+  */
+ const byteToString = function (arr) {
+  if (typeof arr === 'string') {
+      return arr;
+  }
+  var str = '',
+      _arr = arr;
+  for (var i = 0; i < _arr.length; i++) {
+      var one = _arr[i].toString(2),
+          v = one.match(/^1+?(?=0)/);
+      if (v && one.length == 8) {
+          var bytesLength = v[0].length;
+          var store = _arr[i].toString(2).slice(7 - bytesLength);
+          for (var st = 1; st < bytesLength; st++) {
+              store += _arr[st + i].toString(2).slice(2);
+          }
+          str += String.fromCharCode(parseInt(store, 2));
+          i += bytesLength - 1;
+      } else {
+          str += String.fromCharCode(_arr[i]);
+      }
+  }
+  return str;
+}
 
 module.exports = {
   formatTime,
-  formatCurrentDateTime
+  formatCurrentDateTime,
+  ab2hex,
+  byteToString
 }
