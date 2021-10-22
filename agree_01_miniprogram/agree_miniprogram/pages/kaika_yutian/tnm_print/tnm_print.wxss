@@ -4,7 +4,7 @@ page {
 }
 .top-class{
     background: #FFFFFF;
-    height: 872rpx;
+    /* height: 1144rpx; */
 }
 .view-head {
     padding-top: 48rpx;
@@ -107,11 +107,18 @@ page {
     color: #333333;
     opacity: 1;
 }
+.body-top-detail-view{
+    /* padding-left: 200rpx;
+    padding-top: 24rpx; */
+    display: inline-block;
+}
 
 .view-bottom {
     margin-top: 20px;
 }
-
+.body-bottom1{
+    padding-top: 32rpx;
+}
 .view-bottom>button {
     background-color: rgb(159, 153, 238);
 }

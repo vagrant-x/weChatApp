@@ -55,7 +55,7 @@ page {
     font-weight: 400;
     color: #333333;
     opacity: 1;
-    text-align: left;
+    text-align: right;
 }
 .my-picker-class{
     height: 50rpx;

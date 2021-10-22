@@ -1,5 +1,6 @@
 // pages/take_number/tnm_print/tnm_print.js
 const util = require("../../../utils/util.js")
+const drawQrcode = require('../../../utils/weapp.qrcode.js')
 const app = getApp()
 Page({
 
@@ -36,7 +37,7 @@ Page({
                 { "ln": { "count": "1" } },
                 { "text": { "txt": "网点总等待人数：1" } },
                 { "ln": { "count": "1" } },
-                { "text": { "txt": "队列校验码：668" } },
+                { "text": { "txt": "队列校验码：777" } },
                 { "ln": { "count": "1" } },
                 { "text": { "txt": "取号时间：" + myDate } },
                 { "ln": { "count": "6" } }
@@ -151,7 +152,28 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+      // 调用weapp.qrcode.js 生成二维码
+      let bee_img = "../../../resource/img/0001.png"
+      drawQrcode({
+          width: 150,
+          height: 150,
+          // x: 20,
+          // y: 20,
+          canvasId: 'myQrcode',
+          // ctx: wx.createCanvasContext('myQrcode'),
+          typeNumber: 10,
+          text: app.globalData.controllerId,
+        //   image: {
+        //       imageResource: bee_img,
+        //       dx: 30,
+        //       dy: 30,
+        //       dWidth: 30,
+        //       dHeight: 30
+        //   },
+          callback(e) {
+              console.log('e: ', e)
+          }
+      })
     },
 
     /**

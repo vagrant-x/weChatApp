@@ -2,11 +2,11 @@
   "pages":[
     "pages/home_page/home_page",
 
-    "pages/kaika_yutian/number_taking_index/number_taking_index",
-    "pages/kaika_yutian/tnm_scan_idr/tnm_scan_idr",
-    "pages/kaika_yutian/input_information/input_information",
-    "pages/kaika_yutian/bc_select_card/bc_select_card",
     "pages/kaika_yutian/tnm_print/tnm_print",  
+    "pages/kaika_yutian/number_taking_index/number_taking_index",
+    "pages/kaika_yutian/input_information/input_information",
+    "pages/kaika_yutian/tnm_scan_idr/tnm_scan_idr",
+    "pages/kaika_yutian/bc_select_card/bc_select_card",
 
     "pages/take_number/number_taking_index/number_taking_index",
     "pages/take_number/tnm_print/tnm_print",  

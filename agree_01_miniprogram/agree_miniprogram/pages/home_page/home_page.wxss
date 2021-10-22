@@ -12,7 +12,9 @@
      width: 100%;
      height: 100%;
  }
-
+.swiper-item-image{
+    width: 100%;
+}
  .img-btn {
      position: absolute;
      /* left: 143px; */
@@ -102,7 +104,7 @@
 
 
 
- branches-services-image {
+ .branches-services-image {
      width: 100%;
      position: position;
      top: 0;
