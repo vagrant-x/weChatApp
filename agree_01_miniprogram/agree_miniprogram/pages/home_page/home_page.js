@@ -34,7 +34,7 @@ Page({
       },
       {
         id: "2",
-        text: "开卡",
+        text: "开卡预填",
         // icon: "https://www.aweb.org.cn/static/ui/poc/kaika.png",
         icon: getApp().globalData.img_service + "/miniprogramImg/img_homepage" + "/kaika.png",
       },
@@ -110,9 +110,13 @@ Page({
     console.log("点击打开交易：",event)
     // 开卡交易 id 在data设置为2
     console.log("id:", event.currentTarget.dataset.id)
-    if(event.currentTarget.dataset.id == "2"){
+    if(event.currentTarget.dataset.id == "1"){ // 开卡
       wx.navigateTo({
         url: '/pages/bank_card/bc_index/bc_index',
+      })
+    }else if(event.currentTarget.dataset.id == "2"){ //开卡预填
+      wx.navigateTo({
+        url: '/pages/kaika_yutian/number_taking_index/number_taking_index',
       })
     }else{
       wx.showToast({

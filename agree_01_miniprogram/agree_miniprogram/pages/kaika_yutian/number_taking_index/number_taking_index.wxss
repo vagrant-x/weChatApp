@@ -1,0 +1,115 @@
+/* pages/take_number/number_taking_method/number_taking_method.wxss */
+page {
+    background: #F2F3F5;
+}
+
+.bt {
+    width: 90%;
+    height: 80px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.view-body {
+    /* display: flex;
+    justify-content: center; */
+}
+
+.view-body-in {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.view-comman {
+    width: 336rpx;
+    height: 336rpx;
+    background: #FFFFFF;
+    opacity: 1;
+    border-radius: 168rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.view-scan {
+    margin-top: 112rpx;
+}
+
+.view-nfc {
+    margin-top: 128rpx;
+}
+
+.view-image {
+    width: 144rpx;
+    height: 144rpx;
+}
+
+.view-text {
+    margin-top: 30rpx;
+    font-size: 36rpx;
+    font-family: PingFang SC;
+    font-weight: 600;
+    line-height: 52rpx;
+    color: #313233;
+    opacity: 1;
+}
+
+/* =====================模态框============================== */
+.nfc-body {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    z-index: 999999;
+}
+
+.nfc-body-view {
+    width: 540rpx;
+    height: 622rpx;
+    position: absolute;
+    /*让节点脱离文档流,我的理解就是,从页面上浮出来,不再按照文档其它内容布局*/
+    margin: 0 auto;
+    top: 316rpx;
+    /*节点脱离了文档流,如果设置位置需要用top和left,right,bottom定位*/
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999998;
+    /*个人理解为层级关系,由于这个节点要在顶部显示,所以这个值比其余节点的都大*/
+    background: white;
+}
+
+.nfc-body-view-view {
+    width: 476rpx;
+    height: 476rpx;
+    margin-top: 32rpx;
+    margin-left: 32rpx;
+    background: #EBEEF5;
+    opacity: 1;
+    border-radius: 4px;
+}
+
+.nfc-body-view-view-image {
+    width: 452rpx;
+    height: 307rpx;
+    margin-top: 102rpx;
+    margin-left: 10rpx;
+}
+
+.nfc-body-view2 {
+    margin-top: 32rpx;
+    text-align: center;
+}
+
+.nfc-body-view-text {
+    font-size: 36rpx;
+    font-family: PingFang SC;
+    font-weight: 600;
+    line-height: 48rpx;
+    color: #313233;
+    opacity: 1;
+}

@@ -1,21 +1,30 @@
 {
   "pages":[
     "pages/home_page/home_page",
-    "pages/take_number/tnm_print/tnm_print",  
+
+    "pages/kaika_yutian/number_taking_index/number_taking_index",
+    "pages/kaika_yutian/tnm_scan_idr/tnm_scan_idr",
+    "pages/kaika_yutian/input_information/input_information",
+    "pages/kaika_yutian/bc_select_card/bc_select_card",
+    "pages/kaika_yutian/tnm_print/tnm_print",  
+
     "pages/take_number/number_taking_index/number_taking_index",
+    "pages/take_number/tnm_print/tnm_print",  
+    "pages/take_number/tnm_scan_idr/tnm_scan_idr",
+    "pages/take_number/tnm_nfc_tips/tnm_nfc_tips",
+
+    "pages/bank_card/bc_index/bc_index",
     "pages/bank_card/bc_transaction_results/bc_transaction_results",
     "pages/bank_card/bc_signature/bc_signature",
     "pages/bank_card/bc_check_info/bc_check_info",
-    "pages/bank_card/bc_index/bc_index",
-    "pages/take_number/tnm_scan_idr/tnm_scan_idr",
     "pages/bank_card/bc_select_card/bc_select_card",
     "pages/bank_card/bc_identity_verification/bc_identity_verification",
     "pages/bank_card/bc_set_password/bc_set_password",
     "pages/bank_card/input_information/input_information",
-    "components/sixpass/sixpass",
-    "pages/take_number/tnm_nfc_tips/tnm_nfc_tips",
+
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "components/sixpass/sixpass"
   ],
   "window":{
     "backgroundTextStyle":"light",

@@ -1,0 +1,144 @@
+/* pages/take_number/tnm_scan_idr/tnm_scan_idr.wxss */
+page {
+    background: #F2F3F5;
+}
+
+.view-scan {
+    margin-top: 196rpx;
+    margin-left: 88rpx;
+    width: 576rpx;
+    height: 500rpx;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 12px rgba(15, 41, 102, 0.16);
+    opacity: 1;
+    border-radius: 8px;
+}
+
+.view-scan-image1 {
+    width: 432rpx;
+    height: 302rpx;
+    margin-left: 96rpx;
+    margin-top: 62rpx;
+}
+
+.text-tips {
+    text-align: center;
+    margin-top: 26rpx;
+    font-size: 36rpx;
+    font-family: PingFang SC;
+    font-weight: 600;
+    line-height: 78rpx;
+    color: #313233;
+    opacity: 1;
+}
+
+
+
+
+
+
+.view-row {
+    flex-direction: row;
+}
+
+.address {
+    display: inline-block;
+    width: 400rpx;
+}
+
+.view-row-view1 {
+    display: inline-block;
+    width: 256rpx;
+    padding-left: 32rpx;
+    margin-top: 32rpx;
+}
+
+.text-left {
+    width: 256rpx;
+    height: 44rpx;
+    font-size: 32rpx;
+    font-family: PingFang SC;
+    font-weight: 400;
+    line-height: 38rpx;
+    color: #939599;
+    opacity: 1;
+}
+
+.text-right {
+    height: 44rpx;
+    font-size: 32rpx;
+    font-family: PingFang SC;
+    font-weight: 400;
+    line-height: 38rpx;
+    color: #313233;
+    opacity: 1;
+}
+
+
+
+.view-for-button {
+    display: flex;
+    width: 100%;
+    margin-top: 116rpx;
+}
+
+.view-for-button-item1 {
+    margin-left: 64rpx;
+}
+
+.view-for-button1 {
+    width: 208rpx !important;
+    height: 80rpx !important;
+    padding: 0rpx;
+    border: 2rpx solid #3464FF;
+    opacity: 1;
+    border-radius: 40rpx !important;
+    font-size: 36rpx; 
+    font-family: PingFang SC;
+    font-weight: 400;
+    line-height: 70rpx;
+    color: #3464FF;
+    opacity: 1;
+}
+
+.view-for-button-item1 {
+    margin-left: 62rpx;
+}
+.view-for-button-item2 {
+    margin-left: 62rpx;
+}
+.view-for-button2 {
+    padding: 0rpx;
+    background: #407FFF;
+    width: 352rpx !important;
+    height: 80rpx !important;
+    border: 2rpx solid #3464FF;
+    opacity: 1;
+    border-radius: 40rpx !important;
+    font-size: 36rpx;
+    font-family: PingFang SC;
+    font-weight: 400;
+    line-height: 70rpx;
+    color:  #FFFFFF;
+    opacity: 1;
+}
+
+view>button {
+    /* background-color: rgb(146, 175, 230);
+    width: 80% !important;
+    font-size: 14px;
+    margin: 0px !important;
+    padding: 0px !important; */
+}
+
+.view-info {
+    background: #FFFFFF;
+    opacity: 1;
+}
+
+.image-people {
+    margin-left: 276rpx;
+    margin-top: 32rpx;
+    width: 200rpx;
+    height: 220rpx;
+}

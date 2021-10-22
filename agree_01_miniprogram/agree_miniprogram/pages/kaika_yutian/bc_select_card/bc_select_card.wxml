@@ -1,0 +1,41 @@
+<!--pages/bank_card/bc_select_card/bc_select_card.wxml-->
+<view class="body">
+    <view class="body-top">
+        <view class="page-section page-section-spacing swiper">
+            <!--            
+             <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}" interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px"> -->
+            <swiper class="my-swiper-class" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}"
+                circular="{{circular}}" vertical="{{vertical}}" interval="{{interval}}" duration="{{duration}}"
+                previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px" bindchange="swiperChange">
+                <block wx:for="{{cardList}}" wx:key="*this">
+                    <swiper-item>
+                        <view class="swiper-item-view">
+                            <view>
+                                <image class="swiper-item-view-big-img" mode="widthFix" src="{{url.url_card}}/0401.png"></image>
+                            </view>
+                            <view class="swiper-item-view-title">{{item}}</view>
+                            <!-- <view class="swiper-item swiper-item-top {{item}}"></view> -->
+                            <view class="swiper-item-view-detail">
+                                <block wx:for="{{detailList}}" wx:key="id">
+                                    <view class="view-item">
+                                        <image style="{{item.style}}" class="detail-image"
+                                            src="{{url.url_card}}/0400{{item.id}}.png"></image>
+                                        <text>{{item.text}}</text>
+                                    </view>
+                                </block>
+                                <!-- <view>·支持银联    ·一卡多户</view>
+                                <view>·通存通兑    ·投资理财</view>
+                                <view>·网上银行    ·手机银行</view>
+                                <view>·短信服务    ·交易限额</view> -->
+                            </view>
+                        </view>
+                    </swiper-item>
+                </block>
+            </swiper>
+        </view>
+    </view>
+    <!-- 下一步按钮 -->
+    <view class="body-bottom">
+        <button bindtap="next_page" class="bt-next {{bt_class_next}}">选择此卡</button>
+    </view>
+</view>
