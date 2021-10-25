@@ -1,6 +1,8 @@
 {
   "pages":[
     "pages/all/all",
+    "pages/modal_view/modal_view",
+    "pages/modal/modal",
     "pages/qrcode/qrcode",
     "pages/signature/signature",
     "pages/item1/home/home",

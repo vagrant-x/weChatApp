@@ -1,0 +1,23 @@
+<!--pages/modal_view/modal_view.wxml-->
+<!-- 自定义模态框效果-->
+<view>
+    <button bindtap='showMd'>点击弹出框</button>
+    <view class='bg' hidden="{{isHidden}}">
+        <view class='modalContent'>
+            <view class='title'>套餐</view>
+            <view class='cansole' bindtap='hiddenMd'>✘</view>
+            <view class='contents'>
+                <view class="md-title"> 弹出框的内容</view>
+                <view class="md-content">
+                    <view class="md-left">
+                        <image src="../../img/user1.jpg"></image>
+                    </view><!--left-->
+                    <view class="md-right">
+                        <view class="tl-font-28"><text>商品名称</text> <text >商品规格</text></view>
+                        <view class="tl-font-24-999">价格</view>
+                    </view><!--right-->
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

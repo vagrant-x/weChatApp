@@ -13,3 +13,6 @@
 
 <button type="primary" class="button1" bindtap="callFunc" data-callUrl="/pages/signature/signature">屏幕签名</button>
 <button type="primary" class="button1" bindtap="callFunc" data-callUrl="/pages/qrcode/qrcode">生成二维码</button>
+
+<button type="primary" class="button1" bindtap="callFunc" data-callUrl="/pages/modal/modal">自定义模态框-modal</button>
+<button type="primary" class="button1" bindtap="callFunc" data-callUrl="/pages/modal_view/modal_view">自定义模态框-modal-view</button>

@@ -1,0 +1,98 @@
+/* pages/modal_view/modal_view.wxss */
+
+/*****************模态框独立样式操作 start************************/
+.bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    z-index: 999999;
+}
+
+.modalContent {
+    border: 1px solid #ccc;
+    height: 670rpx;
+    width: 600rpx;
+    position: absolute; /*让节点脱离文档流,我的理解就是,从页面上浮出来,不再按照文档其它内容布局*/
+    margin: 0 auto;
+    top: 15%; /*节点脱离了文档流,如果设置位置需要用top和left,right,bottom定位*/
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999998; /*个人理解为层级关系,由于这个节点要在顶部显示,所以这个值比其余节点的都大*/
+    background: white;
+}
+.title
+{
+    height: 85rpx;
+    line-height: 85rpx;
+    background: #F5F5F5;
+    color:#666;
+    padding-left: 20rpx;
+    font-size: 30rpx;
+    text-align: center;
+}
+.cansole
+{
+    /*float: right;
+    margin-right: 20rpx;
+    margin-top: 20rpx;*/
+    position: absolute;
+    top: 18rpx;
+    right: 20rpx;
+    width: 40rpx;
+    height: 40rpx;
+}
+.contents{
+    padding: 20rpx;
+    font-size: 28rpx;
+
+}
+.tl-div{
+    position: absolute;
+    bottom: -8rpx;
+    width: 100%;
+    height: 60rpx;
+    line-height: 60rpx;
+    text-align: center;
+    font-size: 22rpx;
+    color: #CCCCCC;
+    border-top: 1px solid #EEEEEE;
+
+}
+.md-content{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    padding: 40rpx 0 40rpx 20rpx;
+    background: #EEEEEE;
+    margin-bottom: 20rpx;
+}
+.md-left{
+    float: left;
+    width: 90rpx;
+    height: 90rpx;
+    margin-right: 18rpx;
+}
+.md-left image{
+    width: 90rpx;
+    height: 90rpx;
+}
+.md-right{
+    float: left;
+    width: calc(100%-120rpx);
+    height: auto;
+}
+.tl-font-28-333{
+    font-size:28rpx;
+    font-weight:400;
+    color:#333333;
+}
+.tl-font-24-999{
+    font-size:24rpx;
+    font-weight:400;
+    color:#999;
+}
+/*****************模态框独立样式操作 end************************/
