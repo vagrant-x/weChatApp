@@ -52,10 +52,15 @@ Page({
                     content: "返回首页",
                     success(res) {
                         if (res.confirm) {
-                            let pages = getCurrentPages().length - 1;
-                            wx.navigateBack({ // 返回首页
-                                delta: pages
-                            })
+                            app.globalData.url.trans_index = 0 //初始化交易url读取下标
+                            
+                            // let pages = getCurrentPages().length - 1;
+                            // wx.navigateBack({ // 返回首页
+                            //     delta: pages
+                            // })
+                            wx.reLaunch({
+                                url: '/pages/home_page/home_page'
+                              })
                             // wx.redirectTo({
                             //   url: '/pages/home_page/home_page',
                             // })

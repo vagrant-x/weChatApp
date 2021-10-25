@@ -1,4 +1,4 @@
-/* pages/bank_card/bc_select_card/bc_select_card.wxss */
+/* pages/kaika_yutian/bc_select_card/bc_select_card.wxss */
 @import "./weui.wxss";
 
 page {

@@ -1,12 +1,13 @@
 // pages/home_page/home_page.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    url:{
-      url_homepage: getApp().globalData.img_service + "/miniprogramImg/img_homepage"
+    url: {
+      url_homepage: getApp().globalData.img_service + "/miniprogramImg/img_homepage",
     },
     products: [{
       name: '活期理财',
@@ -70,7 +71,7 @@ Page({
       },
       {
         id: "8",
-        text: "全部",
+        text: "更多",
         // icon: "https://www.aweb.org.cn/static/ui/poc/quanbu.png",
         icon: getApp().globalData.img_service + "/miniprogramImg/img_homepage" + "/quanbu.png",
       },
@@ -102,23 +103,32 @@ Page({
   },
   // 点击取号按钮事件
   bt_take_number: function () {
+    app.globalData.url.current_trans = app.globalData.url.quhao_list
+    app.globalData.url.trans_index = 0
+    let next_page_url = app.get_next_page_url()
     wx.navigateTo({
-      url: '/pages/take_number/number_taking_index/number_taking_index',
+      // url: '/pages/take_number/number_taking_index/number_taking_index',
+      url: next_page_url,
     })
   },
-  view_open_transaction: function(event){
-    console.log("点击打开交易：",event)
+  view_open_transaction: function (event) {
+    console.log("点击打开交易：", event)
     // 开卡交易 id 在data设置为2
     console.log("id:", event.currentTarget.dataset.id)
-    if(event.currentTarget.dataset.id == "1"){ // 开卡
+    // if (event.currentTarget.dataset.id == "1") { // 开卡
+    //   wx.navigateTo({
+    //     url: '/pages/bank_card/bc_index/bc_index',
+    //   })
+    // } else 
+    if (event.currentTarget.dataset.id == "2") { //开卡预填
+      // 初始化交易路径，索引
+      app.globalData.url.current_trans = app.globalData.url.kaika_yutian_list
+      app.globalData.url.trans_index = 0
+      let next_page_url = app.get_next_page_url()
       wx.navigateTo({
-        url: '/pages/bank_card/bc_index/bc_index',
+        url: next_page_url,
       })
-    }else if(event.currentTarget.dataset.id == "2"){ //开卡预填
-      wx.navigateTo({
-        url: '/pages/kaika_yutian/number_taking_index/number_taking_index',
-      })
-    }else{
+    } else {
       wx.showToast({
         title: '未开通该服务',
         icon: "error"
@@ -163,15 +173,15 @@ Page({
         this_page.data.token = res.data.access_token
         console.log("获取token成功 : ", app.globalData.token)
       },
-      fail: function(res){
+      fail: function (res) {
         console.log("获取token失败：", res)
         wx.showModal({
           title: "获取token失败",
           content: res.errMsg,
-          success(res){
-            if(res.confirm){
+          success(res) {
+            if (res.confirm) {
               console.log("用户点击确定")
-            }else{
+            } else {
               console.log("用户点击取消")
             }
           }
@@ -185,6 +195,7 @@ Page({
   */
   onLoad: function (options) {
     this.getToken() // 获取token 
+    app.globalData.url.trans_index = 0 //初始化交易url读取下标
   },
 
   /**

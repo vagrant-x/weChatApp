@@ -1,4 +1,4 @@
-// pages/take_number/number_taking_method/number_taking_method.js
+// pages/kaika_yutian/number_taking_method/number_taking_method.js
 const utils = require("../../../utils/util.js")
 const app = getApp()
 Page({
@@ -10,7 +10,8 @@ Page({
     isShowModal: false, //是否显示自定义模态框
     bt_scan_data: "",  // 保存扫描返回数据，其中result为扫描内容
     url: {
-      url_img_quhao: app.globalData.img_service + "/miniprogramImg/img_quhao"
+      url_img_quhao: app.globalData.img_service + "/miniprogramImg/img_quhao",
+      url_next_page: ""
     }
   },
   nfc: null,  // 保存调用NFC 对象
@@ -28,12 +29,13 @@ Page({
       success(res) {
         console.log("scan res:", res)
         that.data.bt_scan_data = res;
-        let p_url = "/pages/kaika_yutian/tnm_scan_idr/tnm_scan_idr?controllerId=" + that.data.bt_scan_data.result
+        // let p_url = "/pages/kaika_yutian/tnm_scan_idr/tnm_scan_idr?controllerId=" + that.data.bt_scan_data.result
+        let next_page_url = app.get_next_page_url()  + "?controllerId=" + that.data.bt_scan_data.result
         app.globalData.controllerId = that.data.bt_scan_data.result
         wx.navigateTo({
-          url: p_url,
+          url: next_page_url,
           success: function () {
-            console.log(`跳转到 ${p_url} 成功`)
+            console.log(`跳转到 ${next_page_url} 成功`)
           },
         })
       }
@@ -45,6 +47,11 @@ Page({
    *  靠近NFC 读取里面controllerId
    */
   bt_touch: function () {
+    // wx.navigateTo({
+    //   url: '/pages/kaika_yutian/tnm_scan_idr/tnm_scan_idr',
+    // })
+    // return
+
     let that = this
     wx.startHCE({ // 打开系统NFC
       aid_list: ['F222222222'],
@@ -98,15 +105,18 @@ Page({
                     }
                   })
                   // 跳转到身份证读取页面
+
+                  let next_page_url = app.get_next_page_url()
                   wx.navigateTo({
-                    url: '/pages/kaika_yutian/tnm_scan_idr/tnm_scan_idr?transName=quhao',
+                    // url: '/pages/kaika_yutian/tnm_scan_idr/tnm_scan_idr',
+                    url: next_page_url,
                   })
                 } else if (res1.cancel) {
-                  console.log("用户取消读取身份证")
+                  console.log("kaika_yutian:用户取消读取身份证")
                   // that.myShowModal("继续发现NFC")
                   that.nfc.stopDiscovery({
                     success: function () {
-                      console.log("NFC扫描成功，调用stopDiscovery")
+                      console.log("kaika_yutian:NFC扫描成功，调用stopDiscovery")
                     }
                   })
                 }

@@ -1,4 +1,4 @@
-// pages/take_number/tnm_scan_idr/tnm_scan_idr.js
+// pages/kaika_yutian/tnm_scan_idr/tnm_scan_idr.js
 const app = getApp()
 Page({
 
@@ -91,7 +91,7 @@ Page({
     call_idr: function () {
         let this_page = this
         let bearer_token = 'Bearer ' + app.globalData.token
-        console.log("bearer_token :", bearer_token)
+        // console.log("bearer_token :", bearer_token)
         // call_device: function (controllerId, deviceType, method, req_body)
         let promise = app.call_device(app.globalData.controllerId, "idr", "ReadIdentityCard", {})
         promise.then(res => {
@@ -172,11 +172,12 @@ Page({
         this.call_idr()
     },
     show_number_taking_page: function () {
-        let page_url = "/pages/kaika_yutian/input_information/input_information"
+        let next_page_url = app.get_next_page_url()
+        // let page_url = "/pages/kaika_yutian/input_information/input_information"
         wx.navigateTo({
-            url: page_url,
+            url: next_page_url,
             success(res) {
-                console.log(`跳转到 ${page_url} 成功`)
+                console.log(`跳转到 ${next_page_url} 成功`)
             },
         })
     },

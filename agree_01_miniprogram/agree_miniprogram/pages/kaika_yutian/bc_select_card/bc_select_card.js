@@ -1,4 +1,4 @@
-// pages/bank_card/bc_select_card/bc_select_card.js
+// pages/kaika_yutian/bc_select_card/bc_select_card.js
 const app = getApp()
 Page({
 
@@ -88,7 +88,7 @@ Page({
     onShareAppMessage: function () {
 
     },
-    swiperChange: function(event){
+    swiperChange: function (event) {
         console.log(event)
         let cardName = this.data.cardList[event.detail.current]
         this.setData({
@@ -99,8 +99,10 @@ Page({
     next_page: function () {
         app.globalData.userInfo["cardName"] = this.data.selectCard
         console.log("跳出选择卡种页面, userInfo = ", app.globalData.userInfo)
+        let next_page_url = app.get_next_page_url()
         wx.navigateTo({
-            url: '/pages/kaika_yutian/tnm_print/tnm_print',
+            // url: '/pages/kaika_yutian/tnm_print/tnm_print',
+            url: next_page_url,
         })
     }
 })

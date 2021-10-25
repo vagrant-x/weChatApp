@@ -53,7 +53,7 @@
         <view class="branches-services-ctn">
             <view class="branches-services-ctn-header">
                 <view class="">
-                    <text style='font-size:16px;font-weight:600;color:#272727'>广州星汇园支行</text>
+                    <text style='font-size:16px;font-weight:600;color:#272727'>赞同科技体验网点</text>
                 </view>
                 <view class="branches-services-ctn-header-right">
                     <text style='font-size:14px;color:#656565;margin-right:6px'>其他网点 ></text>

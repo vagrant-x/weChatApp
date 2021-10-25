@@ -91,7 +91,7 @@ Page({
     call_idr: function () {
         let this_page = this
         let bearer_token = 'Bearer ' + app.globalData.token
-        console.log("bearer_token :", bearer_token)
+        // console.log("bearer_token :", bearer_token)
         // call_device: function (controllerId, deviceType, method, req_body)
         let promise = app.call_device(app.globalData.controllerId, "idr", "ReadIdentityCard", {})
         promise.then(res => {
@@ -172,16 +172,20 @@ Page({
         this.call_idr()
     },
     show_number_taking_page: function () {
-        let page_url = ""
-        if (this.data.transName == "kaika") {
-            page_url = "/pages/bank_card/bc_identity_verification/bc_identity_verification"
-        } else {
-            page_url = "/pages/take_number/tnm_print/tnm_print"
-        }
+        // let page_url = ""
+        // if (this.data.transName == "kaika") {
+        //     page_url = "/pages/bank_card/bc_identity_verification/bc_identity_verification"
+        // } else {
+        //     page_url = "/pages/take_number/tnm_print/tnm_print"
+        // }
+
+        let next_page_url = app.get_next_page_url()
+
+        console.log("读取身份证：", next_page_url)
         wx.navigateTo({
-            url: page_url,
+            url: next_page_url,
             success(res) {
-                console.log(`跳转到 ${page_url} 成功`)
+                console.log(`跳转到 ${next_page_url} 成功`)
             },
         })
     },

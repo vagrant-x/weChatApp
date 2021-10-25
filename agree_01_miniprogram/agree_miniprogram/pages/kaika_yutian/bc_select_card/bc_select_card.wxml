@@ -1,4 +1,4 @@
-<!--pages/bank_card/bc_select_card/bc_select_card.wxml-->
+<!--pages/kaika_yutian/bc_select_card/bc_select_card.wxml-->
 <view class="body">
     <view class="body-top">
         <view class="page-section page-section-spacing swiper">

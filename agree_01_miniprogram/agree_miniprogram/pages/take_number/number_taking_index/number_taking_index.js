@@ -28,12 +28,13 @@ Page({
       success(res) {
         console.log("scan res:", res)
         that.data.bt_scan_data = res;
-        let p_url = "/pages/take_number/tnm_scan_idr/tnm_scan_idr?controllerId=" + that.data.bt_scan_data.result
+        let next_page_url = app.get_next_page_url()
+        next_page_url = next_page_url + "?controllerId=" + that.data.bt_scan_data.result
         app.globalData.controllerId = that.data.bt_scan_data.result
         wx.navigateTo({
-          url: p_url,
+          url: next_page_url,
           success: function () {
-            console.log(`跳转到 ${p_url} 成功`)
+            console.log(`跳转到 ${next_page_url} 成功`)
           },
         })
       }
@@ -44,13 +45,18 @@ Page({
    * 靠一靠调用方法：
    *  靠近NFC 读取里面controllerId
    */
-  bt_touch: function () {
+  bt_touch1: function () {     
+    // wx.navigateTo({
+    //   url: '/pages/take_number/tnm_scan_idr/tnm_scan_idr?transName=quhao',
+    // })
+    // return
+    
     let that = this
     wx.startHCE({ // 打开系统NFC
       aid_list: ['F222222222'],
       success(res) {
         console.log("startHCE->success：", res.errMsg)
-        that.bt_touch_call_nfc()
+        that.bt_touch_call_nfc1()
       },
       fail(res) {
         console.log("startHCE->fail", res.errMsg)
@@ -59,7 +65,7 @@ Page({
   },
 
   // 调用 NFC 
-  bt_touch_call_nfc: function () {
+  bt_touch_call_nfc1: function () {
     const that = this
     const nfc = wx.getNFCAdapter()
     that.nfc = nfc
@@ -98,8 +104,10 @@ Page({
                     }
                   })
                   // 跳转到身份证读取页面
+                  let next_page_url = app.get_next_page_url()
                   wx.navigateTo({
-                    url: '/pages/take_number/tnm_scan_idr/tnm_scan_idr?transName=quhao',
+                    // url: '/pages/take_number/tnm_scan_idr/tnm_scan_idr?transName=quhao',
+                    url: next_page_url,
                   })
                 } else if (res1.cancel) {
                   console.log("用户取消读取身份证")

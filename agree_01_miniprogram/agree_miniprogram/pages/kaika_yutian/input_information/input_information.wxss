@@ -1,4 +1,4 @@
-/* pages/bank_card/input_information/input_information.wxss */
+/* pages/kaika_yutian/input_information/input_information.wxss */
 page {
     background-color: #F2F3F5;
 }

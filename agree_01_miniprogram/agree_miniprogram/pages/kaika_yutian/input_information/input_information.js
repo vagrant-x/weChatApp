@@ -1,4 +1,5 @@
-// pages/bank_card/input_information/input_information.js
+// pages/kaika_yutian/input_information/input_information.js
+const app =getApp()
 Page({
 
   /**
@@ -104,11 +105,13 @@ Page({
       userInfo["d_telephone_number"] = this.data.d_telephone_number
       userInfo["d_address"] = this.data.d_address
       userInfo["d_postal_code"] = this.data.d_postal_code
-      userInfo["d_accupation"] = this.data.array[ this.data.index]
+      userInfo["d_accupation"] = this.data.array[this.data.index]
       console.log("app.userInfo:", app.globalData.userInfo)
+      let next_page_url = app.get_next_page_url()
       // 跳转到下一页
       wx.navigateTo({
-        url: '/pages/kaika_yutian/bc_select_card/bc_select_card',
+        // url: '/pages/kaika_yutian/bc_select_card/bc_select_card',
+        url: next_page_url,
       })
     } else {
       wx.showToast({

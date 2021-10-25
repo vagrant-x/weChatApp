@@ -14,8 +14,8 @@ App({
   },
 
   globalData: {
-    token: "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiYWRhYXMiXSwic2NvcGUiOlsiZGV2aWNlIl0sImV4cCI6MTYzNDkyNzU4NywiYXV0aG9yaXRpZXMiOlsic3VwZXJfbWFuYWdlciJdLCJqdGkiOiI5YzM4MjQzNC02MmUyLTQ3ODAtYWQxZi04YzMxNzhlM2JmN2YiLCJjbGllbnRfaWQiOiJjbGllbnRfY3JlZGVudGlhbHMifQ.mFC3WosxWuTuomOoFdwq8Y0Hf2HjQ3F2G6ubYime_Vv728K3RsH8Xad-No0_-xviZKICxSPtWl7P7MjAnlkK4jf4cKdqdOumIqYt6qigqQ-WjFXoW5ErerWobgm-ZoGj0g1uhF9FJ7LXlSGbTdJO53dZ58gUuDmkWu9W891h1mAD9FGAvBmENqp6iGWS6dXYPyWiRLdatQcxZAaEHKmkQlQ8S3_ViVL5krc46UA4TAqeXUQzyRzZUvPJk2Vznn_yBpTNvjv3iDqUsDoZiNmLIZk3v5ZdTRnyDgLDAB5LVcJiiRPDt0byCAuo0rivPhoAbCMHjAotb8Ds31T9rdL9HQ",  // 请求的token，在 home_page中获取
-    controllerId: "0000202B09D7", // 调用外设网关id， 如： 0000202B09D7
+    token: "",  // 请求的token，在 home_page中获取
+    controllerId: "", // 调用外设网关id， 如： 0000202B09D7
     // 保存开卡等交易用户信息
     userInfo: {
       // address: "广州市天河区华穗路398号冼村街公共集体户",
@@ -37,9 +37,33 @@ App({
     img_service: "https://www.xiongweixp.tech", // 备案服务器地址
     url: {
       url_token: "https://www.xiongweixp.tech/adaas/token?grant_type=client_credentials&scope=device&client_id=client_credentials&client_secret=123456",  // 免用户请求token连接
+      // 交易：开卡预填 
+      kaika_yutian_list: [ 
+        "/pages/kaika_yutian/number_taking_index/number_taking_index",
+        "/pages/kaika_yutian/tnm_scan_idr/tnm_scan_idr",
+        "/pages/kaika_yutian/input_information/input_information",
+        "/pages/kaika_yutian/bc_select_card/bc_select_card",
+        "/pages/kaika_yutian/tnm_print/tnm_print",  
+      ],
+      // 交易：取号
+      quhao_list: [
+        "/pages/take_number/number_taking_index/number_taking_index",
+        "/pages/take_number/tnm_scan_idr/tnm_scan_idr",
+        "/pages/take_number/tnm_print/tnm_print",  
+      ],
+      current_trans: [], //当前进行的交易
+      trans_index: 0, //交易执行步骤
     }
   },
   deivce: {
+  },
+  // 
+  get_next_page_url: function(){
+    let index = this.globalData.url.trans_index
+    let trans_url = this.globalData.url.current_trans[index]
+    this.globalData.url.trans_index++
+    console.log("next_page_url: ", trans_url)
+    return trans_url
   },
 
   // 定义全局方法
@@ -53,7 +77,7 @@ App({
     }
     let p = new Promise(function (resolve, reject) {
       let bearer_token = 'Bearer ' + app.globalData.token
-      console.log("bearer_token :", bearer_token)
+      // console.log("bearer_token :", bearer_token)
       let url1 = "https://www.xiongweixp.tech/adaas/devices?token=" + controllerId + "&deviceType=" + deviceType + "&method=" + method
       console.log("调用外设 url:", url1)
       wx.request({
