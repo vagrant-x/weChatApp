@@ -1,0 +1,124 @@
+/* pages/kaika_yutian/tnm_print/tnm_print.wxss */
+page {
+    background: #F2F3F5;
+}
+.top-class{
+    background: #FFFFFF;
+    /* height: 1144rpx; */
+}
+.view-head {
+    padding-top: 48rpx;
+    margin-left: 244rpx;
+    /* height: 40px; */
+    /* text-align: center; */
+    /* font-size: 20px; */
+}
+
+.view-head>text {
+    font-size: 44rpx;
+    font-family: PingFang SC;
+    font-weight: 400;
+    line-height: 78rpx;
+    color: #313233;
+    opacity: 1;
+}
+
+.view-body {
+    margin-left: 32rpx;
+    margin-top: 48rpx;
+    /* margin-bottom: 48rpx; */
+    width: 686rpx;
+    height: 668rpx;
+    background: #F0F3FA;
+    opacity: 1;
+}
+
+.view-body-head {
+    text-align: center;
+    /* background-color: rgb(166, 182, 226);
+    border-bottom: 3px dashed #000; */
+    height: 144rpx;
+    background: linear-gradient(131deg, #0FBEB1 0%, #19D6BB 100%);
+    opacity: 1;
+}
+
+.v-number {
+    height: 66rpx;
+    font-size: 48rpx;
+    font-family: PingFang SC;
+    font-weight: 500;
+    line-height: 66rpx;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+.v-number-text {
+    height: 44rpx;
+    font-size: 32rpx;
+    font-family: PingFang SC;
+    font-weight: 400;
+    line-height: 44rpx;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+.view-body-body {
+    /* background-color: rgb(211, 211, 211); */
+    background: #F0F3FA;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.view-body-body>view {
+    height: 50rpx;
+    margin-top: 32rpx;
+    padding-left: 64rpx;
+    padding-right: 50rpx;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.view-body-body>view:first-child {
+    margin-top: 0px;
+}
+
+.view-body-body>view>text:first-child {
+    width: 50%;
+    display: inline-block;
+    height: 50rpx;
+    font-size: 36rpx;
+    font-family: PingFang SC;
+    font-weight: 400;
+    line-height: 50rpx;
+    color: #666666;
+    opacity: 1;
+}
+
+.view-body-body-text2 {
+    text-align: right;
+    width: 50%;
+    display: inline-block;
+    height: 50rpx;
+    font-size: 36rpx;
+    font-family: PingFang SC;
+    font-weight: 500;
+    line-height: 50rpx;
+    color: #333333;
+    opacity: 1;
+}
+.body-top-detail-view{
+    /* padding-left: 200rpx;
+    padding-top: 24rpx; */
+    display: inline-block;
+}
+
+.view-bottom {
+    margin-top: 20px;
+}
+.body-bottom1{
+    padding-top: 32rpx;
+}
+.view-bottom>button {
+    background-color: rgb(159, 153, 238);
+}

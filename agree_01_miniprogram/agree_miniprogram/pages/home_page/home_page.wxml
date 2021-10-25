@@ -61,8 +61,8 @@
                 </view>
             </view>
             <view style='display:flex;align-items:center;margin-bottom:9px'>
-                <text style='font-size:14px;color:#1260FF;margin-right:20px'>距您2.31m</text><text
-                    style='font-size:14px;color:#333333'>广州市天河区金穗路28号102</text>
+                <text style='font-size:14px;color:#1260FF;margin-right:20px'>距您2.31km</text><text
+                    style='font-size:14px;color:#333333'>北京市西城区西直门外大街</text>
             </view>
             <view class="tag-and-btn-zone">
                 <view class="tag-zone">

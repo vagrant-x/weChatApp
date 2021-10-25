@@ -15,7 +15,7 @@ App({
 
   globalData: {
     token: "",  // 请求的token，在 home_page中获取
-    controllerId: "", // 调用外设网关id， 如： 0000202B09D7
+    controllerId: "0000202B09D7", // 调用外设网关id， 如： 0000202B09D7
     // 保存开卡等交易用户信息
     userInfo: {
       // address: "广州市天河区华穗路398号冼村街公共集体户",
@@ -53,6 +53,7 @@ App({
       ],
       current_trans: [], //当前进行的交易
       trans_index: 0, //交易执行步骤
+      current_trans_name: "",
     }
   },
   deivce: {

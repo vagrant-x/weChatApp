@@ -103,12 +103,13 @@ Page({
   },
   // 点击取号按钮事件
   bt_take_number: function () {
-    app.globalData.url.current_trans = app.globalData.url.quhao_list
-    app.globalData.url.trans_index = 0
-    let next_page_url = app.get_next_page_url()
+    // app.globalData.url.current_trans = app.globalData.url.quhao_list
+    // app.globalData.url.trans_index = 0
+    // let next_page_url = app.get_next_page_url()
+    app.globalData.url.current_trans_name = "quhao"
     wx.navigateTo({
       // url: '/pages/take_number/number_taking_index/number_taking_index',
-      url: next_page_url,
+      url: "/pages/trans_page/number_taking_index/number_taking_index",
     })
   },
   view_open_transaction: function (event) {
@@ -122,11 +123,12 @@ Page({
     // } else 
     if (event.currentTarget.dataset.id == "2") { //开卡预填
       // 初始化交易路径，索引
-      app.globalData.url.current_trans = app.globalData.url.kaika_yutian_list
-      app.globalData.url.trans_index = 0
-      let next_page_url = app.get_next_page_url()
+      // app.globalData.url.current_trans = app.globalData.url.kaika_yutian_list
+      // app.globalData.url.trans_index = 0
+      // let next_page_url = app.get_next_page_url()
+      app.globalData.url.current_trans_name = "kaika_yutian"
       wx.navigateTo({
-        url: next_page_url,
+        url: "/pages/trans_page/number_taking_index/number_taking_index",
       })
     } else {
       wx.showToast({
@@ -196,6 +198,8 @@ Page({
   onLoad: function (options) {
     this.getToken() // 获取token 
     app.globalData.url.trans_index = 0 //初始化交易url读取下标
+    app.globalData.url.current_trans_name = ""
+     console.log("------> ", getCurrentPages().length)
   },
 
   /**
