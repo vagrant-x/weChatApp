@@ -41,15 +41,21 @@ Page({
                 { "ln": { "count": "1" } },
                 { "text": { "txt": "队列校验码：777" } },
                 { "ln": { "count": "1" } },
-                { "qr": { "content": app.globalData.controllerId } },
+                // { "qr": { "content": app.globalData.controllerId } },
+                { "qr": { "content": "V0001" } },
                 { "ln": { "count": "1" } },
                 { "text": { "txt": "取号时间：" + myDate } },
                 { "ln": { "count": "6" } }
             ]
         }
         // call_device: function (controllerId, deviceType, method, req_body)
+        wx.showLoading({
+            title: "打印中...",
+            mask: true
+        })
         let promise = app.call_device(app.globalData.controllerId, "escposprinter", "Print", print_data)
         promise.then(res => {
+            wx.hideLoading({})
             console.log("调用外设success：", res)
             if (res.statusCode == 200 && res.data.status == 0) {
                 wx.showModal({
@@ -79,6 +85,7 @@ Page({
                 })
             }
         }).catch(res => {
+            wx.hideLoading({})
             wx.showModal({
                 title: "打印失败",
                 content: res.errMsg,

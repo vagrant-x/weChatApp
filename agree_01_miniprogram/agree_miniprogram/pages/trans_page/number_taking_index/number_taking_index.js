@@ -27,6 +27,7 @@ Page({
     // 允许从相机和相册扫码
     wx.scanCode({
       success(res) {
+        app.globalData.request_params_type = "token" // 扫描，通过网关自己生成的token进行调用
         console.log("scan res:", res)
         that.data.bt_scan_data = res;
         // let p_url = "/pages/kaika_yutian/tnm_scan_idr/tnm_scan_idr?controllerId=" + that.data.bt_scan_data.result
@@ -89,6 +90,7 @@ Page({
             console.log("type1->:", type1);
 
             app.globalData.controllerId = mypayload.slice(3) // controllerId 保存到全局
+            app.globalData.request_params_type = "controllerId" // 扫描，通过NFC 后去mac地址调用外设
             // 模态窗口关闭
             that.setData({
               isShowModal: false

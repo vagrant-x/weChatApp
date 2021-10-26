@@ -102,13 +102,13 @@ Page({
             } else {
                 wx.showModal({
                     title: "调用身份证出错",
-                    content: res.data
+                    content: JSON.stringify(res.data)
                 })
             }
         }).catch(res => {
             wx.showModal({
                 title: "调用身份证设备失败",
-                content: res.errMsg,
+                content: JSON.stringify(res.errMsg),
             })
         })
 

@@ -14,8 +14,9 @@ App({
   },
 
   globalData: {
+    request_params_type : "",  // token / controllerId
     token: "",  // 请求的token，在 home_page中获取
-    controllerId: "0000202B09D7", // 调用外设网关id， 如： 0000202B09D7
+    controllerId: "", // 调用外设网关id， 如： 0000202B09D7
     // 保存开卡等交易用户信息
     userInfo: {
       // address: "广州市天河区华穗路398号冼村街公共集体户",
@@ -68,7 +69,7 @@ App({
   },
 
   // 定义全局方法
-  call_device: function (controllerId, deviceType, method, req_body) {
+  call_device: function (token_controllerId, deviceType, method, req_body) {
     // this.getToken() //测试用
     let app = getApp()
     if (app.globalData.token == "") {
@@ -79,7 +80,9 @@ App({
     let p = new Promise(function (resolve, reject) {
       let bearer_token = 'Bearer ' + app.globalData.token
       // console.log("bearer_token :", bearer_token)
-      let url1 = "https://www.xiongweixp.tech/adaas/devices?token=" + controllerId + "&deviceType=" + deviceType + "&method=" + method
+      // 选择请求调用外设的key类型
+      let key1 = app.globalData.request_params_type == "controllerId" ? "controllerId" : "token"
+      let url1 = "https://www.xiongweixp.tech/adaas/devices?" + key1 + "=" + token_controllerId + "&deviceType=" + deviceType + "&method=" + method
       console.log("调用外设 url:", url1)
       wx.request({
         url: url1,
