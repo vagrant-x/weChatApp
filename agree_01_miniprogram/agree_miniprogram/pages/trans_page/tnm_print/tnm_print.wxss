@@ -108,8 +108,8 @@ page {
     opacity: 1;
 }
 .body-top-detail-view{
-    /* padding-left: 200rpx;
-    padding-top: 24rpx; */
+    /* padding-left: 200rpx;*/
+    padding-top: 24rpx; 
     display: inline-block;
 }
 
