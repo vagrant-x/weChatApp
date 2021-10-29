@@ -2,11 +2,17 @@
   "pages":[
     "pages/home_page/home_page",
     
-    "pages/trans_page/number_taking_index/number_taking_index",
-    "pages/trans_page/tnm_scan_idr/tnm_scan_idr",
-    "pages/trans_page/input_information/input_information",
+    "pages/trans_page/bc_check_info/bc_check_info",
+    "pages/trans_page/bc_identity_verification/bc_identity_verification",
+    "pages/trans_page/bc_index/bc_index",
     "pages/trans_page/bc_select_card/bc_select_card",
+    "pages/trans_page/bc_set_password/bc_set_password",
+    "pages/trans_page/bc_signature/bc_signature",
+    "pages/trans_page/bc_transaction_results/bc_transaction_results",
+    "pages/trans_page/input_information/input_information",
+    "pages/trans_page/number_taking_index/number_taking_index",
     "pages/trans_page/tnm_print/tnm_print",  
+    "pages/trans_page/tnm_scan_idr/tnm_scan_idr",
 
     "pages/kaika_yutian/tnm_print/tnm_print",  
     "pages/kaika_yutian/number_taking_index/number_taking_index",

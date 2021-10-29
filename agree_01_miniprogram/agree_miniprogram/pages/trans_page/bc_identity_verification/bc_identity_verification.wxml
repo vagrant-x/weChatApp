@@ -1,0 +1,40 @@
+<!--pages/bank_card/bc_identity_verification/bc_identity_verification.wxml-->
+<view class="body">
+    <view class="body-top">
+        <view class="view-people" wx:if="{{isShowTakePhoto}}">
+            <view data-img-Type="nationalEmblem" class="view-people-view1">
+                <image bindtap="click_image_take_photo" class="view-people-image" mode="widthFix"
+                    src="{{url.url_people}}">
+                </image>
+                <image bindtap="click_image_take_photo" wx:if="{{!show_fm_delete_image}}"
+                    class="view-people-image-camera" mode="widthFix" src="{{url.url_camera}}">
+                </image>
+                <text bindtap="click_image_take_photo" wx:if="{{!show_fm_delete_image}}"
+                    class="view-people-text">拍摄客户本人半身照</text>
+            </view>
+        </view>
+        <!-- 拍摄客户本人半身照 -->
+        <!-- <view wx:if="{{isShowTakePhoto}}">
+            <image bindtap="click_image_take_photo" mode="widthFix" src="../../../resource/img/bank_card/u140.png"></image>
+        </view> -->
+
+        <!-- 核查通过信息 -->
+        <view class="view-real" wx:if="{{!isShowTakePhoto}}">
+            <view  class="view-real-in">
+                <image class="view-real-image" mode="widthFix" src="{{url.url_people_real}}"></image>
+            </view>
+            <!-- <view class="body-top-view-tip">
+                <icon type="success" size="20px"></icon>
+                <text>核查通过</text>
+            </view> -->
+            <view class="view-show-success" wx:if="isShowSuccess">
+                <image class="image-success" src="{{url.url_success_image}}"></image>
+                <text class="view-text">核查通过</text>
+            </view>
+        </view>
+    </view>
+    <!-- 下一步按钮 -->
+    <view class="body-bottom">
+        <button bindtap="next_page" class="bt-next  {{bt_class_next}}">下一步</button>
+    </view>
+</view>

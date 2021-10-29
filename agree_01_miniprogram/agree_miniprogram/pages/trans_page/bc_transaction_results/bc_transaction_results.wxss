@@ -1,0 +1,70 @@
+/* pages/bank_card/bc_transaction_results/bc_transaction_results.wxss */
+page{
+    background: #F2F3F5;
+}
+.body-top-in{
+    width: 100%;
+    height: 800rpx;
+    background: #FFFFFF;
+}
+.body-top-title {
+    padding-top: 96rpx;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.body-top-view-images1 {
+    width: 72rpx;
+    height: 72rpx;
+    margin-right: 16rpx;
+}
+
+.body-top-title-text {
+    /* background-color: grey; */
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    /* height: 100px; */
+}
+
+.body-top-detail {
+    text-align: center;
+    margin-top: 96rpx;
+    /* width: 90%;
+    height: 350px;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: rgb(241, 234, 234); */
+}
+.body-top-detail-view{
+    display: flex;
+    justify-content: center;
+}
+.image-qrcode {
+    width: 336rpx;
+    height: 336rpx;
+}
+
+.image-detail-tip {
+    display: inline-block;
+    width: 66rpx;
+    height: 72rpx;
+}
+.body-top-detail-tip{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 32rpx;
+}
+.body-top-detail-text {
+    width: 476rpx;
+    height: 40rpx;
+    font-size: 28rpx;
+    font-family: PingFang SC;
+    font-weight: 600;
+    /* line-height: 96rpx; */
+    color: #333333;
+    opacity: 1;
+}

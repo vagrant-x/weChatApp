@@ -1,0 +1,42 @@
+<!--pages/bank_card/bc_check_info/bc_check_info.wxml-->
+<view class="body">
+    <view class="body-top">
+        <view class="body-top-view">
+            <text class="view_first_text" decode="true">姓名&nbsp;</text>
+            <text  class="view_second_text">{{userInfo.name}}</text>
+        </view>
+        <view class="body-top-view">
+            <text class="view_first_text" decode="true">身份证号&nbsp;</text>
+            <text  class="view_second_text">{{userInfo.id}}</text>
+        </view>
+        <view class="body-top-view">
+            <text class="view_first_text" decode="true">手机号码&nbsp;</text>
+            <text  class="view_second_text">{{userInfo.d_mobile_phone_number}}</text>
+        </view>
+        <view class="body-top-view">
+            <text class="view_first_text" decode="true">电话号码&nbsp;</text>
+            <text  class="view_second_text">{{userInfo.d_telephone_number}}</text>
+        </view>
+        <view class="body-top-view">
+            <text class="view_first_text" decode="true">职业&nbsp;</text>
+            <text  class="view_second_text">{{userInfo.d_accupation}}</text>
+        </view>
+        <view class="body-top-view body-top-view-addr" >
+            <view><text   class="view_first_text" decode="true">居住地址&nbsp;</text></view>
+            <view><text  class="view_second_text">{{userInfo.d_address}}</text></view>
+        </view>
+                <view class="body-top-view">
+            <text class="view_first_text" decode="true">邮政编码&nbsp;</text>
+            <text  class="view_second_text">{{userInfo.d_postal_code}}</text>
+        </view>
+    </view>
+    <!-- 下一步按钮 -->
+    <view class="body-bottom">
+        <button bindtap="next_page" class="bt-next bt-next-click">信息正确，签名确认</button>
+        <view class="body-bottom-view1">
+            <image class="body-bottom-view1-images1" src="{{url.url_kaika}}"></image>
+            <!-- <icon type="warn" size="20"></icon> -->
+            <text>若信息有误，请退出或联系工作人员</text>
+        </view>
+    </view>
+</view>

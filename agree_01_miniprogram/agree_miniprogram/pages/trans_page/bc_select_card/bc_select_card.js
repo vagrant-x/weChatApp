@@ -100,7 +100,18 @@ Page({
         app.globalData.userInfo["cardName"] = this.data.selectCard
         console.log("跳出选择卡种页面, userInfo = ", app.globalData.userInfo)
         // let next_page_url = app.get_next_page_url()
-        let next_page_url = "/pages/trans_page/tnm_print/tnm_print"
+        let next_page_url = ""
+        if(app.globalData.url.current_trans_name == "kaika_yutian"){  // 开卡预填
+            next_page_url = "/pages/trans_page/tnm_print/tnm_print"
+        }else if(app.globalData.url.current_trans_name == "kaika"){  // 开卡
+            next_page_url = "/pages/trans_page/bc_set_password/bc_set_password"
+        }else{
+            wx.showModal({
+                content: '交易 ' + app.globalData.url.current_trans_name + "没有下一步",
+            })
+            return
+        }
+
         wx.navigateTo({
             // url: '/pages/kaika_yutian/tnm_print/tnm_print',
             url: next_page_url,

@@ -175,9 +175,12 @@ Page({
         // let next_page_url = app.get_next_page_url()
         // let page_url = "/pages/kaika_yutian/input_information/input_information"
         let next_page_url = ""
-        if(app.globalData.url.current_trans_name == "kaika_yutian"){
+        if(app.globalData.url.current_trans_name == "kaika_yutian"){  // 开卡预填
             next_page_url = "/pages/trans_page/input_information/input_information"
-        }else {
+        }else if(app.globalData.url.current_trans_name == "kaika"){  // 开卡
+            next_page_url = "/pages/trans_page/bc_identity_verification/bc_identity_verification"
+        }
+        else {  // 打印取号结果
             next_page_url = "/pages/trans_page/tnm_print/tnm_print"
         }
         wx.navigateTo({

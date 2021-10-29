@@ -29,7 +29,8 @@ Page({
       {
         // callback:this.appointmentAccountOpening,
         id: "1",
-        text: "预约开户",
+        // text: "预约开户",
+        text: "开卡",
         // icon: "https://www.aweb.org.cn/static/ui/poc/yuyuekaihu.png",
         icon: getApp().globalData.img_service + "/miniprogramImg/img_homepage" + "/yuyuekaihu.png",
       },
@@ -116,11 +117,12 @@ Page({
     console.log("点击打开交易：", event)
     // 开卡交易 id 在data设置为2
     console.log("id:", event.currentTarget.dataset.id)
-    // if (event.currentTarget.dataset.id == "1") { // 开卡
-    //   wx.navigateTo({
-    //     url: '/pages/bank_card/bc_index/bc_index',
-    //   })
-    // } else 
+    if (event.currentTarget.dataset.id == "1") { // 开卡
+      app.globalData.url.current_trans_name = "kaika"
+      wx.navigateTo({
+        url: '/pages/trans_page/bc_index/bc_index',
+      })
+    } else 
     if (event.currentTarget.dataset.id == "2") { //开卡预填
       // 初始化交易路径，索引
       // app.globalData.url.current_trans = app.globalData.url.kaika_yutian_list

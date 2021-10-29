@@ -172,7 +172,7 @@ Page({
     // sixpass1.setBackgroundColor("red")
     if(this.data.isShowSuccess){
       wx.navigateTo({
-        url: '/pages/take_number/tnm_scan_idr/tnm_scan_idr?transName=kaika',
+        url: '/pages/trans_page/tnm_scan_idr/tnm_scan_idr?transName=kaika',
       })
     }else{
       wx.showToast({
