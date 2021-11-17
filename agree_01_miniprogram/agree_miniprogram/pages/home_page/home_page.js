@@ -30,8 +30,8 @@ Page({
         // callback:this.appointmentAccountOpening,
         id: "1",
         // text: "预约开户",
-        text: "开卡",
         // icon: "https://www.aweb.org.cn/static/ui/poc/yuyuekaihu.png",
+        text: "开卡",
         icon: getApp().globalData.img_service + "/miniprogramImg/img_homepage" + "/yuyuekaihu.png",
       },
       {
